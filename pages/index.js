@@ -66,6 +66,19 @@ export const revealUpDelay = {
 	}
 }
 
+export const cursorReveal = {
+	initial: { opacity: 0 },
+  enter: { 
+    opacity: 1,
+    transition: { duration: 0.75, ease: [0.985, 0.010, 0.315, 0.830], delay: 1.75 }
+  },
+	exit: {
+    opacity: 0,
+		transition: { duration: 0.75, ease: [0.985, 0.010, 0.315, 0.830] }
+	}
+}
+
+
 export default function Home() {
   const [samHovered, setSamHovered] = useState(false);
   const [isaacHovered, setIsaacHovered] = useState(false);
@@ -73,25 +86,25 @@ export default function Home() {
   const toggleSamHover = () => setSamHovered(!samHovered);
   const toggleIsaacHover = () => setIsaacHovered(!isaacHovered);
 
-  // const cursorX = useMotionValue(-100);
-  // const cursorY = useMotionValue(-100);
+  const cursorX = useMotionValue(-75);
+  const cursorY = useMotionValue(-75);
 
-  // const springConfig = { damping: 200, stiffness: 2000 };
-  // const cursorXSpring = useSpring(cursorX, springConfig);
-  // const cursorYSpring = useSpring(cursorY, springConfig);
+  const springConfig = { damping: 200, stiffness: 2000 };
+  const cursorXSpring = useSpring(cursorX, springConfig);
+  const cursorYSpring = useSpring(cursorY, springConfig);
 
-  // useEffect(() => {
-  //   const moveCursor = (e) => {
-  //     cursorX.set(e.clientX - 20);
-  //     cursorY.set(e.clientY - 20);
-  //   };
+  useEffect(() => {
+    const moveCursor = (e) => {
+      cursorX.set(e.clientX - 75);
+      cursorY.set(e.clientY - 75);
+    };
 
-  //   window.addEventListener("mousemove", moveCursor);
+    window.addEventListener("mousemove", moveCursor);
 
-  //   return () => {
-  //     window.removeEventListener("mousemove", moveCursor);
-  //   };
-  // }, []);
+    return () => {
+      window.removeEventListener("mousemove", moveCursor);
+    };
+  }, []);
 
   return (
     <Layout>
@@ -124,21 +137,16 @@ export default function Home() {
           exit="exit"
           className="w-full h-full"
         >
+          <m.div variants={cursorReveal}>
+            <m.div
+              className="cursor"
+              style={{
+                translateX: cursorXSpring,
+                translateY: cursorYSpring,
+              }}
+            />
+          </m.div>
           <Div100vh className="flex flex-wrap p-4 md:p-5 text-[18px] leading-[24px] md:text-[20px] md:leading-[27px] xl:text-[24px] xl:leading-[31px] selection:bg-black selection:text-off-grey">
-
-            {/* <div className="fixed inset-0 z-10 items-center justify-center hidden md:flex">
-              <div className="group w-[40vw] h-[20vw] bg-black bg-opacity-[2%] relative">
-                <div className="opacity-0 transition ease-in-out duration-500 group-hover:opacity-100">
-                  <m.div
-                    className="cursor"
-                    style={{
-                      translateX: cursorXSpring,
-                      translateY: cursorYSpring,
-                    }}
-                  />
-                </div>
-              </div>
-            </div> */}
 
             <div className={`fixed inset-0 flex items-start md:items-center justify-center transition ease-in-out duration-500 z-0 mt-[35vh] md:mt-0 md:pt-0  ${samHovered || isaacHovered ? 'opacity-0' : 'opacity-100' }`}>
               <m.div variants={logoReveal} className="relative overflow-hidden">
