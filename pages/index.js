@@ -38,22 +38,22 @@ export default function Home() {
       
       <section className={`mt-auto ml-auto w-full md:w-8/12 border-b border-t border-black text-right hidden md:block max-w-[900px] transition ease-in-out duration-500 absolute bottom-0 right-0 mb-[40vh] mr-5 ${samHovered ? 'opacity-100' : 'opacity-0' }`}>
         <div className="py-2 border-b border-black overflow-hidden">
-          <div className={`${samHovered ? 'translate-y-[0px]' : 'translate-y-[40px]'} flex transition ease-in-out duration-500`}>
+          <div className={`${samHovered ? 'translate-y-[0px] delay-[30ms]' : 'translate-y-[40px]'} flex transition ease-in-out duration-500`}>
             <span>Role</span><span className="ml-auto">Creative Developer</span>
           </div>
         </div>
         <div className="py-2 border-b border-black overflow-hidden">
-          <div className={`${samHovered ? 'translate-y-[0px] delay-50' : 'translate-y-[40px]'} flex transition ease-in-out duration-500`}>
+          <div className={`${samHovered ? 'translate-y-[0px] delay-[60ms]' : 'translate-y-[40px]'} flex transition ease-in-out duration-500`}>
             <span>Selected Clients</span><span className="ml-auto">Fnatic, V&amp;A, PRB, Fat Free</span>
           </div>
         </div>
         <div className="py-2 border-b border-black overflow-hidden">
-          <div className={`${samHovered ? 'translate-y-[0px] delay-100' : 'translate-y-[40px]'} flex transition ease-in-out duration-500`}>
+          <div className={`${samHovered ? 'translate-y-[0px] delay-[90ms]' : 'translate-y-[40px]'} flex transition ease-in-out duration-500`}>
             <span>Stack</span><span className="ml-auto">NextJs, Tailwind, Framer Motion, Vercel</span>
           </div>
         </div>
         <div className="py-2 overflow-hidden">
-          <div className={`${samHovered ? 'translate-y-[0px] delay-150' : 'translate-y-[40px]'} flex transition ease-in-out duration-500`}>
+          <div className={`${samHovered ? 'translate-y-[0px] delay-[120ms]' : 'translate-y-[40px]'} flex transition ease-in-out duration-500`}>
             <span>Awards</span><span className="ml-auto">24</span>
           </div>
         </div>
@@ -61,17 +61,17 @@ export default function Home() {
   
       <section className={`mt-auto ml-auto w-full md:w-8/12 border-b border-t border-black text-right hidden md:block max-w-[900px] transition ease-in-out duration-500 absolute bottom-0 right-0 mb-[40vh] mr-5 ${isaacHovered ? 'opacity-100' : 'opacity-0' }`}>
         <div className="py-2 border-b border-black overflow-hidden">
-          <div className={`${isaacHovered ? 'translate-y-[0px]' : 'translate-y-[40px]'} flex transition ease-in-out duration-500`}>
+          <div className={`${isaacHovered ? 'translate-y-[0px] delay-[30ms]' : 'translate-y-[40px]'} flex transition ease-in-out duration-500`}>
             <span>Role</span><span className="ml-auto">Art Director + Designer</span>
           </div>
         </div>
         <div className="py-2 border-b border-black overflow-hidden">
-          <div className={`${isaacHovered ? 'translate-y-[0px] delay-50' : 'translate-y-[40px]'} flex transition ease-in-out duration-500`}>
+          <div className={`${isaacHovered ? 'translate-y-[0px] delay-[60ms]' : 'translate-y-[40px]'} flex transition ease-in-out duration-500`}>
             <span>Selected Clients</span><span className="ml-auto">Paul Smith, Pitch, Jason O’Rear, PRB</span>
           </div>
         </div>
         <div className="py-2 overflow-hidden">
-          <div className={`${isaacHovered ? 'translate-y-[0px] delay-100' : 'translate-y-[40px]'} flex transition ease-in-out duration-500`}>
+          <div className={`${isaacHovered ? 'translate-y-[0px] delay-[90ms]' : 'translate-y-[40px]'} flex transition ease-in-out duration-500`}>
             <span>Awards</span><span className="ml-auto">20</span>
           </div>
         </div>
