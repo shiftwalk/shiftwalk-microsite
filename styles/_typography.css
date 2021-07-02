@@ -10,11 +10,11 @@ body {
   will-change: transform;
 }
 
-.cursor {
+/* .cursor {
   position: fixed;
   left: 0;
   top: 0;
   width: 40px;
   height: 40px;
   @apply bg-black bg-opacity-75 rounded-full;
-}
+} */
