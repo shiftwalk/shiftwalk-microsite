@@ -8,11 +8,11 @@ export const reveal = {
 	initial: { y: '110%' },
   enter: { 
     y: 0,
-    transition: { duration: 0.75, ease: [0.645, 0.045, 0.355, 1.000] }
+    transition: { duration: 0.75, ease: [0.985, 0.010, 0.315, 0.830] }
   },
 	exit: {
     y: '100%',
-		transition: { duration: 0.75, ease: [0.645, 0.045, 0.355, 1.000] }
+		transition: { duration: 0.75, ease: [0.985, 0.010, 0.315, 0.830] }
 	}
 }
 
@@ -20,11 +20,11 @@ export const revealDownDelay = {
 	initial: { y: '-110%' },
   enter: { 
     y: 0,
-    transition: { duration: 0.75, ease: [0.645, 0.045, 0.355, 1.000], delay: 0.75 }
+    transition: { duration: 0.75, ease: [0.985, 0.010, 0.315, 0.830], delay: 0.75 }
   },
 	exit: {
     y: '-110%',
-		transition: { duration: 0.75, ease: [0.645, 0.045, 0.355, 1.000] }
+		transition: { duration: 0.75, ease: [0.985, 0.010, 0.315, 0.830] }
 	}
 }
 
@@ -32,11 +32,11 @@ export const revealUpDelay = {
 	initial: { y: '110%' },
   enter: { 
     y: 0,
-    transition: { duration: 0.75, ease: [0.645, 0.045, 0.355, 1.000], delay: 0.75 }
+    transition: { duration: 0.75, ease: [0.985, 0.010, 0.315, 0.830], delay: 0.75 }
   },
 	exit: {
     y: '110%',
-		transition: { duration: 0.75, ease: [0.645, 0.045, 0.355, 1.000] }
+		transition: { duration: 0.75, ease: [0.985, 0.010, 0.315, 0.830] }
 	}
 }
 
