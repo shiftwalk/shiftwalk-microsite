@@ -9,7 +9,3 @@ body {
 .will-change {
   will-change: transform;
 }
-
-.cursor {
-  @apply bg-black bg-opacity-[4%] rounded-full w-[150px] h-[150px] fixed left-0 top-0;
-}
