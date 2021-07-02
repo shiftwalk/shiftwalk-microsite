@@ -13,7 +13,7 @@ export default function Header() {
       <a href="mailto:hello@shiftwalk.studio" className="overflow-y-hidden relative ml-auto text-right focus:border-none focus:outline-none group">
         <div className="md:group-hover:translate-y-[32px] md:group-focus:translate-y-[32px] transition ease-in-out duration-500 md:min-w-[250px] xl:min-w-[290px] w-full will-change">
           <span className="hidden md:block absolute top-0 right-0 mt-[-30px] underline">hello@shiftwalk.studio</span>
-          <span className="block underline md:no-underline">Email</span>
+          <span className="block underline">Email</span>
         </div>
       </a>
     </header>
