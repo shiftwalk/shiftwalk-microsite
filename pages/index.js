@@ -17,7 +17,7 @@ export default function Home() {
         description="The mini-studio of Isaac Powell + Sam Goddard, designing and building highly-crafted brands and websites for partners around the world. We have a particular focus on the hospitality, architectural, and creative arts sectors, but we always keep an open mind."
         openGraph={{
           url: 'https://shiftwalk.studio',
-          title: 'ShiftWalk™ — Design+Build Studio',
+          title: 'ShiftWalk™ — Design + Build Studio',
           description: 'The mini-studio of Isaac Powell + Sam Goddard, designing and building highly-crafted brands and websites for partners around the world. We have a particular focus on the hospitality, architectural, and creative arts sectors, but we always keep an open mind.',
           images: [
             {
