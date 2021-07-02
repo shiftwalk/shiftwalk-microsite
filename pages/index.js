@@ -128,16 +128,6 @@ export default function Home() {
               </m.div>
             </div>
 
-            <div className={`fixed inset-0 flex items-start md:items-center justify-center transition ease-in-out duration-500 z-0 mt-[35vh] md:mt-0 md:pt-0  ${samHovered ? 'opacity-100' : 'opacity-0' }`}>
-              <m.div variants={logoReveal} className="relative overflow-hidden">
-                <div className="overflow-hidden text-black">                  
-                  <div className="pointer-events-none w-[200px] md:w-[250px] xl:w-[720px]">
-                    <img src="https://www.datocms-assets.com/38619/1608209736-prb-proj.jpg?auto=format&dpr=1&fit=crop&h=730&w=900" className="w-full" />
-                  </div>
-                </div>
-              </m.div>
-            </div>
-
             <header className="w-full flex flex-wrap items-start">
               <div className="overflow-hidden">
                 <m.div variants={revealDownDelay}>
@@ -252,7 +242,7 @@ export default function Home() {
                       designing and building highly-crafted brands and websites
                       for partners around the world. We have a particular focus
                       on the sustainability, architectural, and creative arts sectors, but
-                      we always keep an open mind.
+                      we always like to keep an open mind.
                     </p>
                   </m.div>
                 </div>
@@ -303,7 +293,12 @@ export default function Home() {
                     </span>
                     <span className="block overflow-hidden text-left">
                       <m.span variants={revealUpDelay} className="block">
-                        sectors, but we always keep an open mind.
+                        sectors, but we always like to keep
+                      </m.span>
+                    </span>
+                    <span className="block overflow-hidden text-left">
+                      <m.span variants={revealUpDelay} className="block">
+                        an open mind.
                       </m.span>
                     </span>
                   </p>
@@ -346,7 +341,7 @@ export default function Home() {
                     </span>
                     <span className="block overflow-hidden text-left">
                       <m.span variants={revealUpDelay} className="block">
-                        we always keep an open mind.
+                        we always like to keep an open mind.
                       </m.span>
                     </span>
                   </p>
