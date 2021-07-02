@@ -5,3 +5,7 @@ body {
 .text-indent {
   text-indent: 5%;
 }
+
+.will-change {
+  will-change: transform;
+}

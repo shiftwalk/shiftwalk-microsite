@@ -18,6 +18,7 @@
     "postcss-preset-env": "^6.7.0",
     "preact": "^10.5.13",
     "react": "^17.0.2",
+    "react-div-100vh": "^0.6.0",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
