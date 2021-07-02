@@ -5,38 +5,38 @@ import { LazyMotion, domAnimation, m, MotionConfigContext } from "framer-motion"
 import Div100vh from 'react-div-100vh'
 
 export const reveal = {
-	initial: { translateY: '110%' },
+	initial: { y: '110%' },
   enter: { 
-    translateY: 0,
+    y: 0,
     transition: { duration: 1.4, ease: [0.985, 0.010, 0.315, 0.830], delay: 0.35 }
   },
 	exit: {
-    translateY: '100%',
+    y: '100%',
 		transition: { duration: 1.4, ease: [0.985, 0.010, 0.315, 0.830] }
 	}
 }
 
 export const revealDownDelay = {
-	initial: { translateY: '-110%' },
+	initial: { y: '-110%' },
   enter: { 
-    translateY: 0,
+    y: 0,
     transition: { duration: 1.4, ease: [0.985, 0.010, 0.315, 0.830], delay: 1.15 }
   },
 	exit: {
-    translateY: '-110%',
+    y: '-110%',
 		transition: { duration: 1.4, ease: [0.985, 0.010, 0.315, 0.830] }
 	}
 }
 
 
 export const logoUnderscore = {
-	initial: { translateX: '-110%' },
+	initial: { x: '-103%' },
   enter: { 
-    translateX: 0,
+    x: 0,
     transition: { duration: 1.25, ease: [0.83, 0, 0.17, 1] }
   },
 	exit: {
-    translateX: 0,
+    x: 0,
 		transition: { duration: 1.25, ease: [0.83, 0, 0.17, 1] }
 	}
 }
@@ -54,13 +54,13 @@ export const logoReveal = {
 }
 
 export const revealUpDelay = {
-	initial: { translateY: '110%' },
+	initial: { y: '110%' },
   enter: { 
-    translateY: 0,
+    y: 0,
     transition: { duration: 1.4, ease: [0.985, 0.010, 0.315, 0.830], delay: 1.15 }
   },
 	exit: {
-    translateY: '110%',
+    y: '110%',
 		transition: { duration: 1.4, ease: [0.985, 0.010, 0.315, 0.830] }
 	}
 }
