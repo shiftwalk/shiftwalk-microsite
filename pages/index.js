@@ -49,7 +49,7 @@ export default function Home() {
         </div>
         <div className="py-2 border-b border-black overflow-hidden">
           <div className={`${samHovered ? 'translate-y-[0px] delay-[90ms]' : 'translate-y-[40px]'} flex transition ease-in-out duration-500`}>
-            <span>Stack</span><span className="ml-auto">NextJs, Tailwind, Framer Motion, Vercel</span>
+            <span>Stack</span><span className="ml-auto">NextJs, Tailwind, Framer Motion, Vercel, Sanity</span>
           </div>
         </div>
         <div className="py-2 overflow-hidden">
