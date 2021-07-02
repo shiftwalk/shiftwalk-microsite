@@ -43,3 +43,7 @@ export default function Home() {
     </Layout>
   )
 }
+
+export const config = {
+  unstable_runtimeJS: false
+};
