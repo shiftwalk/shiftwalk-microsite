@@ -43,15 +43,15 @@ export const logoUnderscore = {
 }
 
 export const logoReveal = {
-	initial: { opacity: 1, scale: 1.15 },
+	initial: { opacity: 1, scale: 1.125 },
   enter: { 
     opacity: 0.10,
     scale: 1,
-    transition: { duration: 1.375, ease: [0.985, 0.010, 0.315, 0.830], delay: 1.55 }
+    transition: { duration: 1.25, ease: [0.985, 0.010, 0.315, 0.830], delay: 1.55 }
   },
 	exit: {
     opacity: 0.10,
-		transition: { duration: 1.375, ease: [0.985, 0.010, 0.315, 0.830] }
+		transition: { duration: 1.25, ease: [0.985, 0.010, 0.315, 0.830] }
 	}
 }
 
