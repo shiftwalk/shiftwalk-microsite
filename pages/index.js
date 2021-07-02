@@ -122,6 +122,7 @@ export default function Home() {
                       alt="ShiftWalk Logo"
                       layout="responsive"
                       className="w-full"
+                      priority
                     />
                   </div>
                 </div>
