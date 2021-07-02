@@ -28,6 +28,7 @@ export const revealDownDelay = {
 	}
 }
 
+
 export const logoUnderscore = {
 	initial: { translateX: '-110%' },
   enter: { 
@@ -104,7 +105,7 @@ export default function Home() {
         >
           <Div100vh className="flex flex-wrap p-4 md:p-5 text-[18px] leading-[24px] md:text-[20px] md:leading-[27px] xl:text-[24px] xl:leading-[31px] selection:bg-black selection:text-off-grey">
 
-            <div className={`fixed inset-0 flex items-start md:items-center justify-center transition ease-in-out duration-500 z-0 mt-[35vh] md:mt-0 md:pt-0 ${samHovered || isaacHovered ? 'opacity-0' : 'opacity-100' }`}>
+            <div className={`fixed inset-0 flex items-start md:items-center justify-center transition ease-in-out duration-500 z-0 mt-[35vh] md:mt-0 md:pt-0  ${samHovered || isaacHovered ? 'opacity-0' : 'opacity-100' }`}>
               <m.div variants={logoReveal} className="relative overflow-hidden">
                 <m.div variants={logoUnderscore} className="absolute bottom-0 left-0 mb-[0px] ml-[0px] xl:mb-[1.25px] xl:ml-[1.25px] w-[16px] h-[4px] md:w-[20px] md:h-[5px] xl:w-[23px] bg-black"></m.div>
 
@@ -143,7 +144,7 @@ export default function Home() {
             </header>
             
             <section className={``}>
-              <div className={`ml-auto w-full md:w-8/12 border-b border-t border-black text-right hidden md:block max-w-[900px] transition ease-in-out duration-500 absolute top-0 right-0 mt-[35vh] mr-5 ${samHovered ? 'opacity-100' : 'opacity-0' }`}>
+              <div className={`ml-auto w-full md:w-8/12 border-b border-t border-black text-right hidden md:block max-w-[900px] transition ease-in-out duration-500 absolute top-0 right-0 mt-[35vh] mr-5 opacity-0 ${samHovered ? 'opacity-100' : 'opacity-0' }`}>
                 <div className="py-2 border-b border-black overflow-hidden">
                   <div className={`${samHovered ? 'translate-y-[0px] delay-[30ms]' : 'translate-y-[40px]'} flex transition ease-in-out duration-500`}>
                     <span>Role</span><span className="ml-auto">Creative Developer</span>
@@ -168,7 +169,7 @@ export default function Home() {
             </section>
         
             <section>
-              <div className={`ml-auto w-full md:w-8/12 border-b border-t border-black text-right hidden md:block max-w-[900px] transition ease-in-out duration-500 absolute top-0 right-0 mt-[35vh] mr-5 ${isaacHovered ? 'opacity-100' : 'opacity-0' }`}>
+              <div className={`ml-auto w-full md:w-8/12 border-b border-t border-black text-right hidden md:block max-w-[900px] transition ease-in-out duration-500 absolute top-0 right-0 mt-[35vh] mr-5 opacity-0 ${isaacHovered ? 'opacity-100' : 'opacity-0' }`}>
                 <div className="py-2 border-b border-black overflow-hidden">
                   <div className={`${isaacHovered ? 'translate-y-[0px] delay-[30ms]' : 'translate-y-[40px]'} flex transition ease-in-out duration-500`}>
                     <span>Role</span><span className="ml-auto">Art Director + Designer</span>
