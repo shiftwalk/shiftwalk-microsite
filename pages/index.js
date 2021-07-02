@@ -8,11 +8,11 @@ export const reveal = {
 	initial: { y: '110%' },
   enter: { 
     y: 0,
-    transition: { duration: 0.75, ease: [0.985, 0.010, 0.315, 0.830] }
+    transition: { duration: 1.4, ease: [0.985, 0.010, 0.315, 0.830] }
   },
 	exit: {
     y: '100%',
-		transition: { duration: 0.75, ease: [0.985, 0.010, 0.315, 0.830] }
+		transition: { duration: 1.4, ease: [0.985, 0.010, 0.315, 0.830] }
 	}
 }
 
@@ -20,11 +20,11 @@ export const revealDownDelay = {
 	initial: { y: '-110%' },
   enter: { 
     y: 0,
-    transition: { duration: 0.75, ease: [0.985, 0.010, 0.315, 0.830], delay: 0.75 }
+    transition: { duration: 1.4, ease: [0.985, 0.010, 0.315, 0.830], delay: 1.25 }
   },
 	exit: {
     y: '-110%',
-		transition: { duration: 0.75, ease: [0.985, 0.010, 0.315, 0.830] }
+		transition: { duration: 1.4, ease: [0.985, 0.010, 0.315, 0.830] }
 	}
 }
 
@@ -32,11 +32,11 @@ export const revealUpDelay = {
 	initial: { y: '110%' },
   enter: { 
     y: 0,
-    transition: { duration: 0.75, ease: [0.985, 0.010, 0.315, 0.830], delay: 0.75 }
+    transition: { duration: 1.4, ease: [0.985, 0.010, 0.315, 0.830], delay: 1.25 }
   },
 	exit: {
     y: '110%',
-		transition: { duration: 0.75, ease: [0.985, 0.010, 0.315, 0.830] }
+		transition: { duration: 1.4, ease: [0.985, 0.010, 0.315, 0.830] }
 	}
 }
 
@@ -160,16 +160,17 @@ export default function Home() {
             </section>
           
             <section className="mt-auto self-end flex items-end w-full">
-              <div className="w-full md:w-7/12 xl:w-1/2 max-w-[660px]">
-                <div className="overflow-hidden mb-16 md:mb-32 xl:mb-40">
+              <div className="w-full">
+                <div className="overflow-hidden mb-12 md:mb-32 xl:mb-40">
                   <m.div variants={revealUpDelay}>
                     <h1 className="font-normal p-0 m-0">About</h1>
                   </m.div>
                 </div>
 
-                <div className="overflow-hidden">
+                <div className="overflow-hidden md:hidden w-full md:w-[460px] xl:w-[660px]">
                   <m.div variants={revealUpDelay}>
-                    <p className="text-indent">The mini-studio of
+                    <p className="text-indent">
+                      The mini-studio of
                       <a href="https://ijpowell.co.uk" target="_blank" rel="nopopener noreferrer" className="group overflow-y-hidden relative focus:border-none focus:outline-none inline-block mb-[-6px] md:mb-[-7px]" onFocus={toggleIsaacHover} onBlur={toggleIsaacHover} onMouseEnter={toggleIsaacHover} onMouseLeave={toggleIsaacHover}>
                         <span className="group-hover:translate-y-[30px] group-focus:translate-y-[30px] will-change transition ease-in-out duration-500 block">
                           <span className="block absolute top-0 left-0 mt-[-30px] w-[113px] md:w-[125px] xl:w-[152px] underline">Isaac Powell</span>
@@ -182,10 +183,109 @@ export default function Home() {
                           <span className="block absolute top-0 left-0 mt-[-30px] w-[123px] md:w-[137px] xl:w-[164px] underline">Sam Goddard</span>
                           <span className="block w-[123px] md:w-[137px] xl:w-[164px] underline">Sam Goddard</span>
                         </span>
-                      </a>
-                      , designing and building highly-crafted brands and websites for partners around the world. We have a particular focus on the hospitality, architectural, and creative arts sectors, but we always keep an open mind.
+                      </a>, 
+                      
+                      designing and building highly-crafted brands and websites
+                      for partners around the world. We have a particular focus
+                      on the hospitality, architectural, and creative arts sectors, but
+                      we always keep an open mind.
                     </p>
                   </m.div>
+                </div>
+
+                <div className="overflow-hidden hidden md:block xl:hidden w-full md:w-[460px] xl:w-[660px]">
+                  <p>
+                    <span className="block overflow-hidden text-left">
+                      <m.span variants={revealUpDelay} className="block">
+                        <span className="ml-[5%]">The mini-studio of</span>
+
+                        <a href="https://ijpowell.co.uk" target="_blank" rel="nopopener noreferrer" className="group overflow-y-hidden relative focus:border-none focus:outline-none inline-block mb-[-6px] md:mb-[-7px] ml-[5px] mr-[-5px]" onFocus={toggleIsaacHover} onBlur={toggleIsaacHover} onMouseEnter={toggleIsaacHover} onMouseLeave={toggleIsaacHover}>
+                          <span className="group-hover:translate-y-[30px] group-focus:translate-y-[30px] will-change transition ease-in-out duration-500 block">
+                            <span className="block absolute top-0 left-0 mt-[-30px] w-[113px] md:w-[125px] xl:w-[152px] underline">Isaac Powell</span>
+                            <span className="block w-[113px] md:w-[125px] xl:w-[152px] underline">Isaac Powell</span>
+                          </span>
+                        </a>
+                        + 
+                      </m.span>
+                    </span>
+
+                    <span className="block overflow-hidden text-left">
+                      <m.span variants={revealUpDelay} className="block">
+                        <a href="https://ijpowell.co.uk" target="_blank" rel="nopopener noreferrer" className="group overflow-y-hidden relative focus:border-none focus:outline-none inline-block mb-[-6px] md:mb-[-7px]" onFocus={toggleSamHover} onBlur={toggleSamHover} onMouseEnter={toggleSamHover} onMouseLeave={toggleSamHover}>
+                          <span className="group-hover:translate-y-[30px] group-focus:translate-y-[30px] will-change transition ease-in-out duration-500 block">
+                            <span className="block absolute top-0 left-0 mt-[-30px] w-[123px] md:w-[131px] xl:w-[164px] underline">Sam Goddard</span>
+                            <span className="block w-[123px] md:w-[131px] xl:w-[164px] underline">Sam Goddard</span>
+                          </span>
+                        </a>, 
+                        
+                        designing and building highly-
+                      </m.span>
+                    </span>
+                    
+                    <span className="block overflow-hidden text-left">
+                      <m.span variants={revealUpDelay} className="block">
+                        crafted brands and websites for partners around
+                      </m.span>
+                    </span>
+                    <span className="block overflow-hidden text-left">
+                      <m.span variants={revealUpDelay} className="block">
+                        the world. We have a particular focus on the
+                      </m.span>
+                    </span>
+                    <span className="block overflow-hidden text-left">
+                      <m.span variants={revealUpDelay} className="block">
+                        hospitality, architectural, and creative arts
+                      </m.span>
+                    </span>
+                    <span className="block overflow-hidden text-left">
+                      <m.span variants={revealUpDelay} className="block">
+                        sectors, but we always keep an open mind.
+                      </m.span>
+                    </span>
+                  </p>
+                </div>
+
+                <div className="hidden xl:block w-full md:w-[460px] xl:w-[740px]">
+                  <p>
+                    <span className="block overflow-hidden text-left">
+                      <m.span variants={revealUpDelay} className="block">
+                        <span className="ml-[5%]">The mini-studio of</span>
+                        <a href="https://ijpowell.co.uk" target="_blank" rel="nopopener noreferrer" className="group overflow-y-hidden relative focus:border-none focus:outline-none inline-block mb-[-6px] md:mb-[-7px] ml-[6px]" onFocus={toggleIsaacHover} onBlur={toggleIsaacHover} onMouseEnter={toggleIsaacHover} onMouseLeave={toggleIsaacHover}>
+                          <span className="group-hover:translate-y-[30px] group-focus:translate-y-[30px] will-change transition ease-in-out duration-500 block">
+                            <span className="block absolute top-0 left-0 mt-[-30px] w-[113px] md:w-[125px] xl:w-[142px] underline">Isaac Powell</span>
+                            <span className="block w-[113px] md:w-[125px] xl:w-[142px] underline">Isaac Powell</span>
+                          </span>
+                        </a>
+                        + 
+                        <a href="https://ijpowell.co.uk" target="_blank" rel="nopopener noreferrer" className="group overflow-y-hidden relative focus:border-none focus:outline-none inline-block mb-[-6px] md:mb-[-7px] ml-[6px]" onFocus={toggleSamHover} onBlur={toggleSamHover} onMouseEnter={toggleSamHover} onMouseLeave={toggleSamHover}>
+                          <span className="group-hover:translate-y-[30px] group-focus:translate-y-[30px] will-change transition ease-in-out duration-500 block">
+                            <span className="block absolute top-0 left-0 mt-[-30px] w-[123px] md:w-[137px] xl:w-[158px] underline">Sam Goddard</span>
+                            <span className="block w-[123px] md:w-[137px] xl:w-[158px] underline">Sam Goddard</span>
+                          </span>
+                        </a>,
+                      </m.span> 
+                    </span>
+                    <span className="block overflow-hidden text-left">
+                      <m.span variants={revealUpDelay} className="block">
+                        designing and building highly-crafted brands and websites
+                      </m.span>
+                    </span>
+                    <span className="block overflow-hidden text-left">
+                      <m.span variants={revealUpDelay} className="block">
+                        for partners around the world. We have a particular focus
+                      </m.span>
+                    </span>
+                    <span className="block overflow-hidden text-left">
+                      <m.span variants={revealUpDelay} className="block">
+                        on the hospitality, architectural, and creative arts sectors, but
+                      </m.span>
+                    </span>
+                    <span className="block overflow-hidden text-left">
+                      <m.span variants={revealUpDelay} className="block">
+                        we always keep an open mind.
+                      </m.span>
+                    </span>
+                  </p>
                 </div>
               </div>
 
