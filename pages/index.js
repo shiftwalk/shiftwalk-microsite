@@ -36,7 +36,7 @@ export default function Home() {
 
       <Header />
       
-      <section className={`mt-auto ml-auto w-full md:w-8/12 border-b border-t border-black text-right hidden md:block max-w-[900px] transition ease-in-out duration-500 absolute bottom-0 right-0 mb-[40vh] mr-5 ${samHovered ? 'opacity-100' : 'opacity-0' }`}>
+      <section className={`ml-auto w-full md:w-8/12 border-b border-t border-black text-right hidden md:block max-w-[900px] transition ease-in-out duration-500 absolute top-0 right-0 mt-[35vh] mr-5 ${samHovered ? 'opacity-100' : 'opacity-0' }`}>
         <div className="py-2 border-b border-black overflow-hidden">
           <div className={`${samHovered ? 'translate-y-[0px] delay-[30ms]' : 'translate-y-[40px]'} flex transition ease-in-out duration-500`}>
             <span>Role</span><span className="ml-auto">Creative Developer</span>
@@ -59,7 +59,7 @@ export default function Home() {
         </div>
       </section>
   
-      <section className={`mt-auto ml-auto w-full md:w-8/12 border-b border-t border-black text-right hidden md:block max-w-[900px] transition ease-in-out duration-500 absolute bottom-0 right-0 mb-[40vh] mr-5 ${isaacHovered ? 'opacity-100' : 'opacity-0' }`}>
+      <section className={`ml-auto w-full md:w-8/12 border-b border-t border-black text-right hidden md:block max-w-[900px] transition ease-in-out duration-500 absolute top-0 right-0 mt-[35vh] mr-5 ${isaacHovered ? 'opacity-100' : 'opacity-0' }`}>
         <div className="py-2 border-b border-black overflow-hidden">
           <div className={`${isaacHovered ? 'translate-y-[0px] delay-[30ms]' : 'translate-y-[40px]'} flex transition ease-in-out duration-500`}>
             <span>Role</span><span className="ml-auto">Art Director + Designer</span>
