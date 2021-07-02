@@ -9,6 +9,8 @@ export default function Header() {
         </div>
       </div>
 
+      <span className="text-center ml-auto hidden md:block -mr-3">Full Site Soon</span>
+
 
       <a href="mailto:hello@shiftwalk.studio" className="overflow-y-hidden relative ml-auto text-right focus:border-none focus:outline-none group">
         <div className="md:group-hover:translate-y-[32px] md:group-focus:translate-y-[32px] transition ease-in-out duration-500 md:min-w-[250px] xl:min-w-[290px] w-full will-change">
