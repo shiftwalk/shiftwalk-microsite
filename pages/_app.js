@@ -1,7 +1,10 @@
 import '@/styles/main.css'
+import { AnimatePresence } from 'framer-motion'
 
 export default function App({ Component, pageProps }) {
   return (
-    <Component {...pageProps} />
+    <AnimatePresence exitBeforeEnter>
+      <Component {...pageProps} />
+    </AnimatePresence>
   )
 }
