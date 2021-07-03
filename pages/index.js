@@ -5,6 +5,8 @@ import { LazyMotion, domAnimation, m } from "framer-motion"
 import Div100vh from 'react-div-100vh'
 import Image from 'next/image'
 import logo from '@/public/logo.svg'
+import logoDark from '@/public/logoDark.svg'
+import { useTheme } from 'next-themes'
 
 export const reveal = {
 	initial: { y: '0%' },
@@ -74,6 +76,8 @@ export default function Home() {
   const toggleSamHover = () => setSamHovered(!samHovered);
   const toggleIsaacHover = () => setIsaacHovered(!isaacHovered);
 
+  const {theme, setTheme} = useTheme()
+
   return (
     <Layout>
       <NextSeo
@@ -105,26 +109,42 @@ export default function Home() {
           exit="exit"
           className="w-full h-full"
         >
-          <Div100vh className="flex flex-wrap p-4 md:p-5 text-[18px] leading-[24px] md:text-[20px] md:leading-[27px] xl:text-[24px] xl:leading-[31px] selection:bg-black selection:text-off-grey">
+          <Div100vh className="flex flex-wrap p-4 md:p-5 text-[18px] leading-[24px] md:text-[20px] md:leading-[27px] xl:text-[24px] xl:leading-[31px] selection:bg-black selection:text-off-grey dark:selection:bg-off-grey dark:selection:text-black">
 
             <div className={`fixed inset-0 flex items-start md:items-center justify-center transition ease-in-out duration-500 z-0 mt-[35vh] md:mt-0 md:pt-0  ${samHovered || isaacHovered ? 'opacity-0' : 'opacity-100' }`}>
               <m.div variants={logoReveal} className="relative overflow-hidden">
-                <m.div variants={logoUnderscore} className="absolute bottom-0 left-0 mb-[0px] ml-[0px] xl:mb-[1.25px] xl:ml-[1.25px] w-[16px] h-[4px] md:w-[20px] md:h-[5px] xl:w-[23px] bg-black"></m.div>
+                <m.div variants={logoUnderscore} className="absolute bottom-0 left-0 mb-[0px] ml-[0px] xl:mb-[1.25px] xl:ml-[1.25px] w-[16px] h-[4px] md:w-[20px] md:h-[5px] xl:w-[23px] bg-black dark:bg-off-grey"></m.div>
 
-                <div className="absolute bottom-0 left-0 mb-[0px] ml-[0px] xl:mb-[1.25px] xl:ml-[1.25px] w-[16px] h-[4px] md:w-[20px] md:h-[5px] xl:w-[23px] bg-black opacity-10"></div>
+                <div className="absolute bottom-0 left-0 mb-[0px] ml-[0px] xl:mb-[1.25px] xl:ml-[1.25px] w-[16px] h-[4px] md:w-[20px] md:h-[5px] xl:w-[23px] bg-black dark:bg-off-grey opacity-10"></div>
 
                 <div className="overflow-hidden text-black">                  
-                  <m.div variants={reveal} className="absolute inset-0 ml-[18px] md:ml-[22px] xl:ml-[24px] bg-off-grey opacity-90 z-10"></m.div>
+                  <m.div variants={reveal} className="absolute inset-0 ml-[18px] md:ml-[22px] xl:ml-[24px] bg-off-grey dark:bg-black opacity-90 z-10"></m.div>
                   
-                  <div className="pointer-events-none w-[200px] md:w-[250px] xl:w-[300px]">
-                    <Image
-                      src={logo}
-                      alt="ShiftWalk Logo"
-                      layout="responsive"
-                      className="w-full"
-                      priority
-                    />
-                  </div>
+                  <button
+                    aria-label="Toggle Dark Mode"
+                    type="button"
+                    className="w-[200px] md:w-[250px] xl:w-[300px] block outline-none focus:outline-none hover:outline-none border-none"
+                    onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                  >
+                    <div className="block dark:hidden">
+                      <Image
+                        src={logo}
+                        alt="ShiftWalk Logo"
+                        layout="responsive"
+                        className="w-full"
+                        priority
+                      />
+                    </div>
+                    <div className="hidden dark:block">
+                      <Image
+                        src={logoDark}
+                        alt="ShiftWalk Logo"
+                        layout="responsive"
+                        className="w-full"
+                        priority
+                      />
+                    </div>
+                  </button>
                 </div>
               </m.div>
             </div>
@@ -156,22 +176,22 @@ export default function Home() {
             </header>
             
             <section className={``}>
-              <div className={`ml-auto w-full md:w-8/12 border-b border-t border-black text-right hidden md:block max-w-[900px] transition ease-in-out duration-500 absolute top-0 right-0 mt-[35vh] mr-5 opacity-0 ${samHovered ? 'opacity-100' : 'opacity-0' }`}>
-                <div className="py-2 border-b border-black">
+              <div className={`ml-auto w-full md:w-8/12 border-b border-t border-black dark:border-off-grey text-right hidden md:block max-w-[900px] transition ease-in-out duration-500 absolute top-0 right-0 mt-[35vh] mr-5 opacity-0 ${samHovered ? 'opacity-100' : 'opacity-0' }`}>
+                <div className="py-2 border-b border-black dark:border-off-grey">
                   <div className="overflow-hidden">
                     <div className={`${samHovered ? 'translate-y-[0px] delay-[30ms]' : 'translate-y-[40px]'} flex transition ease-in-out duration-500`}>
                       <span>Role</span><span className="ml-auto">Creative Developer</span>
                     </div>
                   </div>
                 </div>
-                <div className="py-2 border-b border-black">
+                <div className="py-2 border-b border-black dark:border-off-grey">
                   <div className="overflow-hidden">
                     <div className={`${samHovered ? 'translate-y-[0px] delay-[60ms]' : 'translate-y-[40px]'} flex transition ease-in-out duration-500`}>
                       <span>Selected Clients</span><span className="ml-auto">Fnatic, V&amp;A, PRB, Fat Free</span>
                     </div>
                   </div>
                 </div>
-                <div className="py-2 border-b border-black">
+                <div className="py-2 border-b border-black dark:border-off-grey">
                   <div className="overflow-hidden">
                     <div className={`${samHovered ? 'translate-y-[0px] delay-[90ms]' : 'translate-y-[40px]'} flex transition ease-in-out duration-500`}>
                       <span>Stack</span><span className="ml-auto">NextJs, Tailwind, Framer Motion, Vercel, Sanity</span>
@@ -189,15 +209,15 @@ export default function Home() {
             </section>
         
             <section>
-              <div className={`ml-auto w-full md:w-8/12 border-b border-t border-black text-right hidden md:block max-w-[900px] transition ease-in-out duration-500 absolute top-0 right-0 mt-[35vh] mr-5 opacity-0 ${isaacHovered ? 'opacity-100' : 'opacity-0' }`}>
-                <div className="py-2 border-b border-black">
+              <div className={`ml-auto w-full md:w-8/12 border-b border-t border-black dark:border-off-grey text-right hidden md:block max-w-[900px] transition ease-in-out duration-500 absolute top-0 right-0 mt-[35vh] mr-5 opacity-0 ${isaacHovered ? 'opacity-100' : 'opacity-0' }`}>
+                <div className="py-2 border-b border-black dark:border-off-grey">
                   <div className="overflow-hidden">
                     <div className={`${isaacHovered ? 'translate-y-[0px] delay-[30ms]' : 'translate-y-[40px]'} flex transition ease-in-out duration-500`}>
                       <span>Role</span><span className="ml-auto">Art Director + Designer</span>
                   </div>
                 </div>
                 </div>
-                <div className="py-2 border-b border-black">
+                <div className="py-2 border-b border-black dark:border-off-grey">
                   <div className="overflow-hidden">
                     <div className={`${isaacHovered ? 'translate-y-[0px] delay-[60ms]' : 'translate-y-[40px]'} flex transition ease-in-out duration-500`}>
                       <span>Selected Clients</span><span className="ml-auto">Paul Smith, Pitch, Jason O’Rear, PRB</span>

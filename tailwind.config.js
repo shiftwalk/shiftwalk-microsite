@@ -1,7 +1,7 @@
 module.exports = {
   mode: 'jit',
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false,
+  darkMode: 'class',
   theme: {
     fontFamily: {
       'sans': ['SuisseIntl', 'Arial', 'sans-serif'],
@@ -17,14 +17,9 @@ module.exports = {
     },
     extend: {
       colors: {
-        'black': '#000',
+        'black': '#242B2D',
         'white': '#FFF',
-        'off-grey': '#ABAEA8',
-        color: {
-          light: '#ffb288',
-          default: '#d18d67',
-          dark: '#ce8860',
-        },
+        'off-grey': '#ABAEA8'
       }
     },
   },
