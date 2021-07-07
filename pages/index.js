@@ -159,7 +159,7 @@ export default function Home() {
               <div className="overflow-hidden ml-auto md:mr-[-58px] xl:mr-[-58px] hidden md:block">
                 <m.div variants={revealDownDelay}>
                   <a href="https://www.instagram.com/_shiftwalk.studio/" target="_blank" rel="noopener noreferrer" className="overflow-hidden relative ml-auto text-center focus:border-none focus:outline-none group">
-                    <div className="md:group-hover:translate-y-[32px] md:group-focus:translate-y-[32px] transition ease-in-out duration-500 md:min-w-[250px] xl:min-w-[290px] w-full will-change">
+                    <div className="md:group-hover:translate-y-[32px] md:group-focus:translate-y-[32px] transition-transform ease-in-out duration-500 md:min-w-[250px] xl:min-w-[290px] w-full will-change">
                       <span className="md:block absolute top-0 left-0 mt-[-32px] ml-[44px] xl:ml-[50px] underline">_shiftwalk.studio</span>
                       <span className="block underline">Instagram</span>
                     </div>
@@ -171,7 +171,7 @@ export default function Home() {
               <div className="overflow-hidden ml-auto">
                 <m.div variants={revealDownDelay}>
                   <a href="mailto:hello@shiftwalk.studio" className="overflow-hidden relative ml-auto text-right focus:border-none focus:outline-none group">
-                    <div className="md:group-hover:translate-y-[32px] md:group-focus:translate-y-[32px] transition ease-in-out duration-500 md:min-w-[250px] xl:min-w-[290px] w-full will-change">
+                    <div className="md:group-hover:translate-y-[32px] md:group-focus:translate-y-[32px] transition-transform ease-in-out duration-500 md:min-w-[250px] xl:min-w-[290px] w-full will-change">
                       <span className="hidden md:block absolute top-0 right-0 mt-[-32px] underline">hello@shiftwalk.studio</span>
                       <span className="block underline">Email</span>
                     </div>
@@ -330,14 +330,14 @@ export default function Home() {
                       <m.span variants={revealUpDelay} className="block">
                         <span className="ml-[5%]">The mini-studio of</span>
                         <a href="https://ijpowell.co.uk" target="_blank" rel="nopopener noreferrer" className="group overflow-y-hidden relative focus:border-none focus:outline-none inline-block mb-[-6px] md:mb-[-7px] ml-[6px]" onFocus={toggleIsaacHover} onBlur={toggleIsaacHover} onMouseEnter={toggleIsaacHover} onMouseLeave={toggleIsaacHover}>
-                          <span className="group-hover:translate-y-[30px] group-focus:translate-y-[30px] will-change transition ease-in-out duration-500 block">
+                          <span className="group-hover:translate-y-[30px] group-focus:translate-y-[30px] will-change transition-transform ease-in-out duration-500 block">
                             <span className="block absolute top-0 left-0 mt-[-30px] w-[113px] md:w-[125px] xl:w-[142px] underline">Isaac Powell</span>
                             <span className="block w-[113px] md:w-[125px] xl:w-[142px] underline">Isaac Powell</span>
                           </span>
                         </a>
                         + 
                         <a href="https://samgoddard.co.uk" target="_blank" rel="nopopener noreferrer" className="group overflow-y-hidden relative focus:border-none focus:outline-none inline-block mb-[-6px] md:mb-[-7px] ml-[6px]" onFocus={toggleSamHover} onBlur={toggleSamHover} onMouseEnter={toggleSamHover} onMouseLeave={toggleSamHover}>
-                          <span className="group-hover:translate-y-[30px] group-focus:translate-y-[30px] will-change transition ease-in-out duration-500 block">
+                          <span className="group-hover:translate-y-[30px] group-focus:translate-y-[30px] will-change transition-transform ease-in-out duration-500 block">
                             <span className="block absolute top-0 left-0 mt-[-30px] w-[123px] md:w-[137px] xl:w-[158px] underline">Sam Goddard</span>
                             <span className="block w-[123px] md:w-[137px] xl:w-[158px] underline">Sam Goddard</span>
                           </span>
@@ -372,7 +372,7 @@ export default function Home() {
                 <div className="overflow-hidden">
                   <m.div variants={revealUpDelay}>
                     <div className="overflow-y-hidden relative">
-                      <div className="hover:translate-y-[32px] transition ease-in-out duration-500 md:min-w-[250px] xl:min-w-[290px] w-full">
+                      <div className="hover:translate-y-[32px] transition-transform ease-in-out duration-500 md:min-w-[250px] xl:min-w-[290px] w-full">
                         <span className="block absolute top-0 right-0 mt-[-32px]">Based in Nottingham, UK</span>
                         <span className="block">Worldwide</span>
                       </div>
