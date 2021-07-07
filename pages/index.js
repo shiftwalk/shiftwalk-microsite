@@ -167,6 +167,14 @@ export default function Home() {
                 </m.div>
               </div>
 
+              <div className="overflow-hidden ml-auto md:mr-[-58px] xl:mr-[-58px] block md:hidden">
+                <m.div variants={revealDownDelay}>
+                  <a href="https://www.instagram.com/_shiftwalk.studio/" target="_blank" rel="noopener noreferrer" className="overflow-hidden relative ml-auto text-center focus:border-none focus:outline-none group">
+                    <span className="block underline">Insta</span>
+                  </a>
+                </m.div>
+              </div>
+
 
               <div className="overflow-hidden ml-auto">
                 <m.div variants={revealDownDelay}>
