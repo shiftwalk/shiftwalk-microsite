@@ -89,7 +89,7 @@ export default function Home() {
           description: 'The mini-studio of Isaac Powell + Sam Goddard, designing and building highly-crafted brands and websites for partners around the world. We have a particular focus on the hospitality, architectural, and creative arts sectors, but we always keep an open mind.',
           images: [
             {
-              url: '/social.jpg',
+              url: 'https://www.shiftwalk.studio/static/social.jpg',
               width: 1200,
               height: 630,
               alt: 'ShiftWalk Logo',
