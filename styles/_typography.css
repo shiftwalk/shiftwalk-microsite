@@ -1,5 +1,5 @@
 body {
-  @apply font-sans antialiased text-black bg-off-grey dark:text-off-grey dark:bg-black transition duration-500 ease-in-out;
+  @apply font-sans antialiased text-black bg-off-grey dark:text-off-grey dark:bg-black transition duration-500 ease-in-out m-0 h-full overflow-hidden;
 }
 
 .text-indent {
