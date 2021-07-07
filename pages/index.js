@@ -111,13 +111,13 @@ export default function Home() {
         >
           <Div100vh className="flex flex-wrap p-4 md:p-5 text-[18px] leading-[24px] md:text-[20px] md:leading-[27px] xl:text-[24px] xl:leading-[31px] selection:bg-black selection:text-off-grey dark:selection:bg-off-grey dark:selection:text-black">
 
-            <div className={`fixed inset-0 flex items-start md:items-center justify-center transition ease-in-out duration-500 z-0 mt-[35vh] md:mt-0 md:pt-0  ${samHovered || isaacHovered ? 'opacity-0' : 'opacity-100' }`}>
+            <div className={`fixed inset-0 flex items-start md:items-center justify-center transition ease-in-out duration-500 z-10 mt-[35vh] md:mt-0 md:pt-0  ${samHovered || isaacHovered ? 'opacity-0' : 'opacity-100' }`}>
               <m.div variants={logoReveal} className="relative overflow-hidden">
                 <m.div variants={logoUnderscore} className="absolute bottom-0 left-0 mb-[0px] ml-[0px] xl:mb-[1.25px] xl:ml-[1.25px] w-[16px] h-[4px] md:w-[20px] md:h-[5px] xl:w-[23px] bg-black dark:bg-off-grey"></m.div>
 
                 <div className="absolute bottom-0 left-0 mb-[0px] ml-[0px] xl:mb-[1.25px] xl:ml-[1.25px] w-[16px] h-[4px] md:w-[20px] md:h-[5px] xl:w-[23px] bg-black dark:bg-off-grey opacity-10"></div>
 
-                <div className="overflow-hidden text-black">                  
+                <div className="overflow-hidden text-black relative z-10">                  
                   <m.div variants={reveal} className="absolute inset-0 ml-[18px] md:ml-[22px] xl:ml-[24px] bg-off-grey dark:bg-black opacity-90 z-10"></m.div>
                   
                   <button
@@ -149,16 +149,21 @@ export default function Home() {
               </m.div>
             </div>
 
-            <header className="w-full flex flex-wrap items-start">
+            <header className="w-full flex flex-wrap items-start relative z-30">
               <div className="overflow-hidden">
                 <m.div variants={revealDownDelay}>
                   <span className="pointer-events-none block">Design + Build Studio</span>
                 </m.div>
               </div>
 
-              <div className="overflow-hidden ml-auto md:mr-[-50px] xl:mr-[-58px] hidden md:block">
+              <div className="overflow-hidden ml-auto md:mr-[-58px] xl:mr-[-58px] hidden md:block">
                 <m.div variants={revealDownDelay}>
-                  <span className="text-center">Full Site Soon</span>
+                  <a href="https://www.instagram.com/_shiftwalk.studio/" target="_blank" rel="noopener noreferrer" className="overflow-hidden relative ml-auto text-center focus:border-none focus:outline-none group">
+                    <div className="md:group-hover:translate-y-[32px] md:group-focus:translate-y-[32px] transition ease-in-out duration-500 md:min-w-[250px] xl:min-w-[290px] w-full will-change">
+                      <span className="md:block absolute top-0 left-0 mt-[-32px] ml-[44px] xl:ml-[50px] underline">_shiftwalk.studio</span>
+                      <span className="block underline">Instagram</span>
+                    </div>
+                  </a>
                 </m.div>
               </div>
 
@@ -234,14 +239,8 @@ export default function Home() {
               </div>
             </section>
           
-            <section className="mt-auto self-end flex items-end w-full">
+            <section className="mt-auto self-end flex items-end w-full relative z-30">
               <div className="w-full">
-                <div className="overflow-hidden mb-12 md:mb-32 xl:mb-40">
-                  <m.div variants={revealUpDelay}>
-                    <h1 className="font-normal p-0 m-0">About</h1>
-                  </m.div>
-                </div>
-
                 <div className="overflow-hidden md:hidden w-full md:w-[460px] xl:w-[660px]">
                   <m.div variants={revealUpDelay}>
                     <p className="text-indent">
