@@ -200,7 +200,7 @@ export default function Home() {
                 <div className="py-2 border-b border-black dark:border-off-grey">
                   <div className="overflow-hidden">
                     <div className={`${samHovered ? 'translate-y-[0px] delay-[60ms]' : 'translate-y-[40px]'} flex transition ease-in-out duration-500`}>
-                      <span>Selected Clients</span><span className="ml-auto">Fnatic, V&amp;A, PRB, Fat Free</span>
+                      <span>Selected Clients</span><span className="ml-auto">Fnatic, Reform, PRB, Fat Free</span>
                     </div>
                   </div>
                 </div>
