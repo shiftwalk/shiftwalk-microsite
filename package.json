@@ -20,7 +20,8 @@
     "preact": "^10.5.13",
     "react": "^17.0.2",
     "react-div-100vh": "^0.6.0",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-smooth-marquee": "^1.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.6",

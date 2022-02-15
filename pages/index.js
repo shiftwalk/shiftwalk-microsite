@@ -5,6 +5,7 @@ import { LazyMotion, domAnimation, m } from "framer-motion"
 import Div100vh from 'react-div-100vh'
 import Image from 'next/image'
 import logo from '@/public/logo.svg'
+import Link from 'next/link'
 import logoDark from '@/public/logoDark.svg'
 import { useTheme } from 'next-themes'
 
@@ -16,7 +17,19 @@ export const reveal = {
   },
 	exit: {
     y: '0',
-		transition: { duration: 2, ease: [0.985, 0.010, 0.315, 0.830] }
+		transition: { duration: 1.5, ease: [0.985, 0.010, 0.315, 0.830] }
+	}
+}
+
+export const revealLogoMask = {
+	initial: { y: '0%' },
+  enter: { 
+    y: '-110%',
+    transition: { duration: 2, ease: [0.985, 0.010, 0.315, 0.830], delay: 0.4 }
+  },
+	exit: {
+    y: '-110%',
+		transition: { duration: 0.5, ease: [0.985, 0.010, 0.315, 0.830] }
 	}
 }
 
@@ -36,16 +49,16 @@ export const logoUnderscore = {
 	initial: { x: '-110%' },
   enter: { 
     x: 0,
-    transition: { duration: 1.75, ease: [0.83, 0, 0.17, 1] }
+    transition: { duration: 1.5, ease: [0.83, 0, 0.17, 1] }
   },
 	exit: {
     x: 0,
-		transition: { duration: 1.75, ease: [0.83, 0, 0.17, 1] }
+		transition: { duration: 0.5, ease: [0.83, 0, 0.17, 1] }
 	}
 }
 
 export const logoReveal = {
-	initial: { opacity: 1, scale: 1.125 },
+	initial: { opacity: 1, scale: 1 },
   enter: { 
     opacity: 0.10,
     scale: 1,
@@ -53,6 +66,7 @@ export const logoReveal = {
   },
 	exit: {
     opacity: 0.10,
+    scale: 1,
 		transition: { duration: 1.25, ease: [0.985, 0.010, 0.315, 0.830] }
 	}
 }
@@ -118,7 +132,7 @@ export default function Home() {
                 <div className="absolute bottom-0 left-0 mb-[0px] ml-[0px] xl:mb-[1.25px] xl:ml-[1.25px] w-[16px] h-[4px] md:w-[20px] md:h-[5px] xl:w-[23px] bg-black dark:bg-off-grey opacity-10"></div>
 
                 <div className="overflow-hidden text-black relative z-10">                  
-                  <m.div variants={reveal} className="absolute inset-0 ml-[18px] md:ml-[22px] xl:ml-[24px] bg-off-grey dark:bg-black opacity-90 z-10"></m.div>
+                  <m.div variants={revealLogoMask} className="absolute inset-0 ml-[18px] md:ml-[22px] xl:ml-[24px] bg-off-grey dark:bg-black opacity-90 z-10"></m.div>
                   
                   <button
                     aria-label="Toggle Dark Mode"
@@ -150,43 +164,51 @@ export default function Home() {
             </div>
 
             <header className="w-full flex flex-wrap items-start relative z-30">
-              <div className="overflow-hidden">
+              <div className="overflow-hidden md:min-w-[250px] xl:min-w-[290px]">
+              </div>
+
+              <div className="overflow-hidden ml-auto md:mr-[85px] xl:mr-[85px] hidden md:block">
                 <m.div variants={revealDownDelay}>
                   <span className="pointer-events-none block">Design + Build Studio</span>
                 </m.div>
               </div>
 
-              <div className="overflow-hidden ml-auto md:mr-[-58px] xl:mr-[-58px] hidden md:block">
-                <m.div variants={revealDownDelay}>
+              <div className="overflow-hidden ml-auto flex">
+                <m.div variants={revealDownDelay} className="mr-4 md:mr-6">
                   <a href="https://www.instagram.com/_shiftwalk.studio/" target="_blank" rel="noopener noreferrer" className="overflow-hidden relative ml-auto text-center focus:border-none focus:outline-none group">
-                    <div className="md:group-hover:translate-y-[32px] md:group-focus:translate-y-[32px] transition-transform ease-in-out duration-500 md:min-w-[250px] xl:min-w-[290px] w-full will-change">
-                      <span className="md:block absolute top-0 left-0 mt-[-32px] ml-[44px] xl:ml-[50px] underline">_shiftwalk.studio</span>
-                      <span className="block underline">Instagram</span>
+                    <div className="md:group-hover:translate-y-[32px] md:group-focus:translate-y-[32px] transition-transform ease-in-out duration-500 w-full will-change relative">
+                      <span className="md:block absolute top-0 right-0 mt-[-32px] underline">Insta<span className="hidden md:inline">gram</span></span>
+                      <span className="block underline">Insta<span className="hidden md:inline">gram</span></span>
                     </div>
                   </a>
                 </m.div>
-              </div>
-
-              <div className="overflow-hidden ml-auto md:mr-[-58px] xl:mr-[-58px] block md:hidden">
-                <m.div variants={revealDownDelay}>
-                  <a href="https://www.instagram.com/_shiftwalk.studio/" target="_blank" rel="noopener noreferrer" className="overflow-hidden relative ml-auto text-center focus:border-none focus:outline-none group">
-                    <span className="block underline">Insta</span>
-                  </a>
-                </m.div>
-              </div>
-
-
-              <div className="overflow-hidden ml-auto">
                 <m.div variants={revealDownDelay}>
                   <a href="mailto:hello@shiftwalk.studio" className="overflow-hidden relative ml-auto text-right focus:border-none focus:outline-none group">
-                    <div className="md:group-hover:translate-y-[32px] md:group-focus:translate-y-[32px] transition-transform ease-in-out duration-500 md:min-w-[250px] xl:min-w-[290px] w-full will-change">
-                      <span className="hidden md:block absolute top-0 right-0 mt-[-32px] underline">hello@shiftwalk.studio</span>
+                    <div className="md:group-hover:translate-y-[32px] md:group-focus:translate-y-[32px] transition-transform ease-in-out duration-500 w-full will-change">
+                      <span className="hidden md:block absolute top-0 right-0 mt-[-32px] underline">Email</span>
                       <span className="block underline">Email</span>
                     </div>
                   </a>
                 </m.div>
               </div>
             </header>
+
+            <section className="absolute top-0 left-0 p-4 z-40">
+              <div className="overflow-hidden relative mb-4 md:mb-5 xl:mb-7 mt-1 md:mt-2">
+                <m.span variants={revealUpDelay} className="block">
+                  <Link href="/"><a className="text-[65px] md:text-[90px] xl:text-[120px] block leading-[0.8] tracking-tight">Bio</a></Link>
+                </m.span>
+              </div>
+              <div className="overflow-hidden relative">
+                <m.span variants={revealUpDelay} className="block">
+                  <Link href="/works">
+                    <a className="text-[65px] md:text-[90px] xl:text-[120px] block leading-[0.8] tracking-tight text-[#93978F] dark:text-[#3E3E3E] transition-colors ease-in-out duration-500 relative overflow-hidden nav-text ml-[2px] md:ml-[4px] xl:ml-[5px]" data-text="Works">
+                      Works
+                    </a>
+                  </Link>
+                </m.span>
+              </div>
+            </section>
             
             <section className={``}>
               <div className={`ml-auto w-full md:w-8/12 border-b border-t border-black dark:border-off-grey text-right hidden md:block max-w-[900px] transition ease-in-out duration-500 absolute top-0 right-0 mt-[35vh] mr-5 opacity-0 ${samHovered ? 'opacity-100' : 'opacity-0' }`}>
@@ -214,7 +236,7 @@ export default function Home() {
                 <div className="py-2">
                   <div className="overflow-hidden">
                     <div className={`${samHovered ? 'translate-y-[0px] delay-[120ms]' : 'translate-y-[40px]'} flex transition ease-in-out duration-500`}>
-                      <span>Awards</span><span className="ml-auto">24</span>
+                      <span>Awards</span><span className="ml-auto">32</span>
                     </div>
                   </div>
                 </div>
@@ -240,7 +262,7 @@ export default function Home() {
                 <div className="py-2">
                   <div className="overflow-hidden">
                     <div className={`${isaacHovered ? 'translate-y-[0px] delay-[90ms]' : 'translate-y-[40px]'} flex transition ease-in-out duration-500`}>
-                      <span>Awards</span><span className="ml-auto">20</span>
+                      <span>Awards</span><span className="ml-auto">26</span>
                     </div>
                   </div>
                 </div>
@@ -364,12 +386,12 @@ export default function Home() {
                     </span>
                     <span className="block overflow-hidden text-left">
                       <m.span variants={revealUpDelay} className="block">
-                        on the sustainability, architectural, and creative arts sectors, but
+                        on the sustainability, architectural, and creative arts sectors,
                       </m.span>
                     </span>
                     <span className="block overflow-hidden text-left">
                       <m.span variants={revealUpDelay} className="block">
-                        we always like to keep an open mind.
+                        but we always like to keep an open mind.
                       </m.span>
                     </span>
                   </p>

@@ -9,3 +9,46 @@ body {
 .will-change {
   will-change: transform;
 }
+
+.nav-text {
+  display: inline-block !important;
+  position: relative;
+
+  &:before {
+    transition: width 0.8s cubic-bezier(.3,.73,.27,.97);
+    content: attr(data-text);
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    width: 0;
+    top: 0;
+    opacity: 100%;
+    @apply text-black dark:text-off-grey;
+  }
+}
+
+.nav-text:hover,
+.nav-text:focus {
+  @apply border-none outline-none;
+  &:before {
+    width: 100%;
+  }
+}
+
+.work-item {
+  .animate-marquee {
+    animation-play-state: paused;
+  }
+  .animate-marquee2 {
+    animation-play-state: paused;
+  }
+}
+
+.work-item:hover {
+  .animate-marquee {
+    animation-play-state: running;
+  }
+  .animate-marquee2 {
+    animation-play-state: running;
+  }
+}
