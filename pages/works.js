@@ -171,7 +171,7 @@ export default function Works() {
                           <span className="w-3/12 text-left">Reform</span>
                           <span className="w-6/12 xl:w-5/12 text-left ml-auto">Brand, Art Direction, Interactive Design, Build</span>
                           <span className="w-1/12 xl:w-2/12 text-left ml-auto">-</span>
-                          <span className="w-1/12 text-right ml-auto group-hover:-translate-y-10 group-focus:-translate-y-10 transition-transform ease-in-out duration-500"><span className="inline-block transform -rotate-45 group-hover:rotate-0 group-focus:rotate-0 transition-transform ease-in-out duration-300">→</span></span>
+                          <span className="w-1/12 text-right ml-auto group-hover:-translate-y-10 group-focus:-translate-y-10 transition-transform ease-in-out duration-500"><span className="inline-block transform group-hover:-rotate-45 group-focus:-rotate-45 transition-transform ease-in-out duration-300">→</span></span>
                         </div>
 
                         <div className="absolute transition-all ease-in-out duration-500 top-0 left-0 -mt-10 group-hover:translate-y-10 group-focus:translate-y-10 opacity-0 group-hover:opacity-100 group-focus:opacity-100 flex w-full text-left right-0">
@@ -203,7 +203,7 @@ export default function Works() {
                           <span className="w-3/12 text-left">Jason O'Rear</span>
                           <span className="w-6/12 xl:w-5/12 text-left ml-auto">Brand, Art Direction, Interactive Design, Build</span>
                           <span className="w-1/12 xl:w-2/12 text-left ml-auto">-</span>
-                          <span className="w-1/12 text-right ml-auto group-hover:-translate-y-10 group-focus:-translate-y-10 transition-transform ease-in-out duration-500"><span className="inline-block transform -rotate-45 group-hover:rotate-0 group-focus:rotate-0 transition-transform ease-in-out duration-300">→</span></span>
+                          <span className="w-1/12 text-right ml-auto group-hover:-translate-y-10 group-focus:-translate-y-10 transition-transform ease-in-out duration-500"><span className="inline-block transform group-hover:-rotate-45 group-focus:-rotate-45 transition-transform ease-in-out duration-300">→</span></span>
                         </div>
 
                         <div className="absolute transition-all ease-in-out duration-500 top-0 left-0 -mt-10 group-hover:translate-y-10 group-focus:translate-y-10 opacity-0 group-hover:opacity-100 group-focus:opacity-100 flex w-full text-left right-0">
@@ -234,7 +234,7 @@ export default function Works() {
                           <span className="w-3/12 text-left">ImReallyATrex</span>
                           <span className="w-6/12 xl:w-5/12 text-left ml-auto">Brand, Art Direction, Interactive Design, Build</span>
                           <span className="w-1/12 xl:w-2/12 text-left ml-auto">CUSP</span>
-                          <span className="w-1/12 text-right ml-auto group-hover:-translate-y-10 group-focus:-translate-y-10 transition-transform ease-in-out duration-500"><span className="inline-block transform -rotate-45 group-hover:rotate-0 group-focus:rotate-0 transition-transform ease-in-out duration-300">→</span></span>
+                          <span className="w-1/12 text-right ml-auto group-hover:-translate-y-10 group-focus:-translate-y-10 transition-transform ease-in-out duration-500"><span className="inline-block transform group-hover:-rotate-45 group-focus:-rotate-45 transition-transform ease-in-out duration-300">→</span></span>
                         </div>
 
                         <div className="absolute transition-all ease-in-out duration-500 top-0 left-0 -mt-10 group-hover:translate-y-10 group-focus:translate-y-10 opacity-0 group-hover:opacity-100 group-focus:opacity-100 flex w-full text-left right-0">
@@ -252,7 +252,7 @@ export default function Works() {
                               </Marquee>
                             </div>
                           </span>
-                          <span className="w-1/12 xl:w-2/12 text-left ml-auto">-</span>
+                          <span className="w-1/12 xl:w-2/12 text-left ml-auto">CUSP</span>
                           <span className="w-1/12 text-right ml-auto group-hover:-translate-y-10 group-focus:-translate-y-10 transition-transform ease-in-out duration-500"></span>
                         </div>
                       </m.span>
@@ -265,7 +265,7 @@ export default function Works() {
                           <span className="w-3/12 text-left">PRB Architects</span>
                           <span className="w-6/12 xl:w-5/12 text-left ml-auto">Brand, Art Direction, Interactive Design, Build</span>
                           <span className="w-1/12 xl:w-2/12 text-left ml-auto">-</span>
-                          <span className="w-1/12 text-right ml-auto group-hover:-translate-y-10 group-focus:-translate-y-10 transition-transform ease-in-out duration-500"><span className="inline-block transform -rotate-45 group-hover:rotate-0 group-focus:rotate-0 transition-transform ease-in-out duration-300">→</span></span>
+                          <span className="w-1/12 text-right ml-auto group-hover:-translate-y-10 group-focus:-translate-y-10 transition-transform ease-in-out duration-500"><span className="inline-block transform group-hover:-rotate-45 group-focus:-rotate-45 transition-transform ease-in-out duration-300">→</span></span>
                         </div>
 
                         <div className="absolute transition-all ease-in-out duration-500 top-0 left-0 -mt-10 group-hover:translate-y-10 group-focus:translate-y-10 opacity-0 group-hover:opacity-100 group-focus:opacity-100 flex w-full text-left right-0">
@@ -296,7 +296,7 @@ export default function Works() {
                           <span className="w-3/12 text-left">Jess Bright</span>
                           <span className="w-6/12 xl:w-5/12 text-left ml-auto">Brand, Art Direction, Interactive Design, Build</span>
                           <span className="w-1/12 xl:w-2/12 text-left ml-auto">-</span>
-                          <span className="w-1/12 text-right ml-auto group-hover:-translate-y-10 group-focus:-translate-y-10 transition-transform ease-in-out duration-500"><span className="inline-block transform -rotate-45 group-hover:rotate-0 group-focus:rotate-0 transition-transform ease-in-out duration-300">→</span></span>
+                          <span className="w-1/12 text-right ml-auto group-hover:-translate-y-10 group-focus:-translate-y-10 transition-transform ease-in-out duration-500"><span className="inline-block transform group-hover:-rotate-45 group-focus:-rotate-45 transition-transform ease-in-out duration-300">→</span></span>
                         </div>
 
                         <div className="absolute transition-all ease-in-out duration-500 top-0 left-0 -mt-10 group-hover:translate-y-10 group-focus:translate-y-10 opacity-0 group-hover:opacity-100 group-focus:opacity-100 flex w-full text-left right-0">
@@ -327,7 +327,7 @@ export default function Works() {
                           <span className="w-3/12 text-left">Fat Free</span>
                           <span className="w-6/12 xl:w-5/12 text-left ml-auto">Art Direction, Interactive Design, Build</span>
                           <span className="w-1/12 xl:w-2/12 text-left ml-auto">-</span>
-                          <span className="w-1/12 text-right ml-auto group-hover:-translate-y-10 group-focus:-translate-y-10 transition-transform ease-in-out duration-500"><span className="inline-block transform -rotate-45 group-hover:rotate-0 group-focus:rotate-0 transition-transform ease-in-out duration-300">→</span></span>
+                          <span className="w-1/12 text-right ml-auto group-hover:-translate-y-10 group-focus:-translate-y-10 transition-transform ease-in-out duration-500"><span className="inline-block transform group-hover:-rotate-45 group-focus:-rotate-45 transition-transform ease-in-out duration-300">→</span></span>
                         </div>
 
                         <div className="absolute transition-all ease-in-out duration-500 top-0 left-0 -mt-10 group-hover:translate-y-10 group-focus:translate-y-10 opacity-0 group-hover:opacity-100 group-focus:opacity-100 flex w-full text-left right-0">
