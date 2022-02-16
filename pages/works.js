@@ -254,11 +254,12 @@ export default function Works() {
                       </m.span>
                     </a>
                   </div>
+                  
                   <div className="py-2 border-b border-black dark:border-off-grey">
-                    <a href="https://prb-a.com/" target="_blank" rel="noreferrer noopener" className="block overflow-hidden group focus:border-none focus:outline-none">
+                    <a href="https://www.jasonorear.com/" target="_blank" rel="noreferrer noopener" className="block overflow-hidden group focus:border-none focus:outline-none">
                       <m.span variants={revealUpDelay} className="block relative">
                         <div className={`flex transition-transform ease-in-out duration-500 group-hover:translate-y-10 group-focus:translate-y-10`}>
-                          <span className="w-3/12 text-left">PRB Architects</span>
+                          <span className="w-3/12 text-left">Jason O'Rear</span>
                           <span className="w-6/12 xl:w-5/12 text-left ml-auto">Brand, Art Direction, Interactive Design, Build</span>
                           <span className="w-1/12 xl:w-2/12 text-left ml-auto">-</span>
                           <span className="w-1/12 text-right ml-auto group-hover:-translate-y-10 group-focus:-translate-y-10 transition-transform ease-in-out duration-500"><span className="inline-block transform -rotate-45 group-hover:rotate-0 group-focus:rotate-0 transition-transform ease-in-out duration-300">→</span></span>
@@ -269,72 +270,72 @@ export default function Works() {
                           <span className="w-6/12 xl:w-5/12 text-left ml-auto relative block overflow-hidden">
                             <div className="relative overflow-hidden md:max-w-[355px] lg:max-w-[390px] xl:max-w-[500px]">
                               <div className="animate-marquee whitespace-nowrap">
-                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-2">Photographer</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-2">Photographer</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-2">Photographer</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-2">Photographer</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-2">Photographer</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-2">Photographer</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-2">Photographer</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-2">Photographer</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-2">Photographer</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-2">Photographer</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-2">Photographer</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-2">Photographer</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-2">Photographer</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-2">Photographer</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-2">Photographer</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-2">Photographer</span>
                                 <span className="mx-1">&bull;</span>
                               </div>
 
                               <div className="absolute top-0 animate-marquee2 whitespace-nowrap">
-                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-2">Photographer</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-2">Photographer</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-2">Photographer</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-2">Photographer</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-2">Photographer</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-2">Photographer</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-2">Photographer</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-2">Photographer</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-2">Photographer</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-2">Photographer</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-2">Photographer</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-2">Photographer</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-2">Photographer</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-2">Photographer</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-2">Photographer</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-2">Photographer</span>
                                 <span className="mx-1">&bull;</span>
                               </div>
                             </div>
@@ -437,10 +438,10 @@ export default function Works() {
                     </a>
                   </div>
                   <div className="py-2 border-b border-black dark:border-off-grey">
-                    <a href="https://www.jasonorear.com/" target="_blank" rel="noreferrer noopener" className="block overflow-hidden group focus:border-none focus:outline-none">
+                    <a href="https://prb-a.com/" target="_blank" rel="noreferrer noopener" className="block overflow-hidden group focus:border-none focus:outline-none">
                       <m.span variants={revealUpDelay} className="block relative">
                         <div className={`flex transition-transform ease-in-out duration-500 group-hover:translate-y-10 group-focus:translate-y-10`}>
-                          <span className="w-3/12 text-left">Jason O'Rear</span>
+                          <span className="w-3/12 text-left">PRB Architects</span>
                           <span className="w-6/12 xl:w-5/12 text-left ml-auto">Brand, Art Direction, Interactive Design, Build</span>
                           <span className="w-1/12 xl:w-2/12 text-left ml-auto">-</span>
                           <span className="w-1/12 text-right ml-auto group-hover:-translate-y-10 group-focus:-translate-y-10 transition-transform ease-in-out duration-500"><span className="inline-block transform -rotate-45 group-hover:rotate-0 group-focus:rotate-0 transition-transform ease-in-out duration-300">→</span></span>
@@ -451,72 +452,72 @@ export default function Works() {
                           <span className="w-6/12 xl:w-5/12 text-left ml-auto relative block overflow-hidden">
                             <div className="relative overflow-hidden md:max-w-[355px] lg:max-w-[390px] xl:max-w-[500px]">
                               <div className="animate-marquee whitespace-nowrap">
-                                <span className="mx-2">Photographer</span>
+                                <span className="mx-2">Architectural Practice</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
+                                <span className="mx-2">Architectural Practice</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
+                                <span className="mx-2">Architectural Practice</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
+                                <span className="mx-2">Architectural Practice</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
+                                <span className="mx-2">Architectural Practice</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
+                                <span className="mx-2">Architectural Practice</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
+                                <span className="mx-2">Architectural Practice</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
+                                <span className="mx-2">Architectural Practice</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
+                                <span className="mx-2">Architectural Practice</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
+                                <span className="mx-2">Architectural Practice</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
+                                <span className="mx-2">Architectural Practice</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
+                                <span className="mx-2">Architectural Practice</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
+                                <span className="mx-2">Architectural Practice</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
+                                <span className="mx-2">Architectural Practice</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
+                                <span className="mx-2">Architectural Practice</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
+                                <span className="mx-2">Architectural Practice</span>
                                 <span className="mx-1">&bull;</span>
                               </div>
 
                               <div className="absolute top-0 animate-marquee2 whitespace-nowrap">
-                                <span className="mx-2">Photographer</span>
+                                <span className="mx-2">Architectural Practice</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
+                                <span className="mx-2">Architectural Practice</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
+                                <span className="mx-2">Architectural Practice</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
+                                <span className="mx-2">Architectural Practice</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
+                                <span className="mx-2">Architectural Practice</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
+                                <span className="mx-2">Architectural Practice</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
+                                <span className="mx-2">Architectural Practice</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
+                                <span className="mx-2">Architectural Practice</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
+                                <span className="mx-2">Architectural Practice</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
+                                <span className="mx-2">Architectural Practice</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
+                                <span className="mx-2">Architectural Practice</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
+                                <span className="mx-2">Architectural Practice</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
+                                <span className="mx-2">Architectural Practice</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
+                                <span className="mx-2">Architectural Practice</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
+                                <span className="mx-2">Architectural Practice</span>
                                 <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
+                                <span className="mx-2">Architectural Practice</span>
                                 <span className="mx-1">&bull;</span>
                               </div>
                             </div>
@@ -731,11 +732,11 @@ export default function Works() {
                     </a>
                   </div>
                   <div className="py-4 border-b border-black dark:border-off-grey">
-                    <a href="https://www.prb-a.com/" target="_blank" rel="noreferrer noopener" className="block overflow-hidden">
+                    <a href="https://www.jasonorear.com/" target="_blank" rel="noreferrer noopener" className="block overflow-hidden">
                       <m.span variants={revealUpDelay} className="block relative">
                         <div className={`flex items-end`}>
                           <span className="flex-1 text-left">
-                            <span className="text-[28px] block leading-none mb-0 pb-0 tracking-tight">PRB Architects</span>
+                            <span className="text-[28px] block leading-none mb-0 pb-0 tracking-tight">Jason O'Rear</span>
                             {/* <span className="block text-[11px] leading-none">Brand, Art Direction, Interactive Design, Build</span> */}
                           </span>
                           <span className="w-[50px] text-right ml-auto text-[24px]"><span className="inline-block transform -rotate-45">→</span></span>
@@ -757,12 +758,13 @@ export default function Works() {
                       </m.span>
                     </a>
                   </div>
+                  
                   <div className="py-4 border-b border-black dark:border-off-grey">
-                    <a href="https://www.jasonorear.com/" target="_blank" rel="noreferrer noopener" className="block overflow-hidden">
+                    <a href="https://www.prb-a.com/" target="_blank" rel="noreferrer noopener" className="block overflow-hidden">
                       <m.span variants={revealUpDelay} className="block relative">
                         <div className={`flex items-end`}>
                           <span className="flex-1 text-left">
-                            <span className="text-[28px] block leading-none mb-0 pb-0 tracking-tight">Jason O'Rear</span>
+                            <span className="text-[28px] block leading-none mb-0 pb-0 tracking-tight">PRB Architects</span>
                             {/* <span className="block text-[11px] leading-none">Brand, Art Direction, Interactive Design, Build</span> */}
                           </span>
                           <span className="w-[50px] text-right ml-auto text-[24px]"><span className="inline-block transform -rotate-45">→</span></span>
