@@ -8,80 +8,7 @@ import logo from '@/public/logo.svg'
 import Link from 'next/link'
 import logoDark from '@/public/logoDark.svg'
 import { useTheme } from 'next-themes'
-
-export const reveal = {
-	initial: { y: '0%' },
-  enter: { 
-    y: '-110%',
-    transition: { duration: 2, ease: [0.985, 0.010, 0.315, 0.830], delay: 0.4 }
-  },
-	exit: {
-    y: '0',
-		transition: { duration: 1.5, ease: [0.985, 0.010, 0.315, 0.830] }
-	}
-}
-
-export const revealLogoMask = {
-	initial: { y: '0%' },
-  enter: { 
-    y: '-110%',
-    transition: { duration: 2, ease: [0.985, 0.010, 0.315, 0.830], delay: 0.4 }
-  },
-	exit: {
-    y: '-110%',
-		transition: { duration: 0.5, ease: [0.985, 0.010, 0.315, 0.830] }
-	}
-}
-
-export const revealDownDelay = {
-	initial: { y: '-110%' },
-  enter: { 
-    y: 0,
-    transition: { duration: 1.4, ease: [0.985, 0.010, 0.315, 0.830], delay: 1.5 }
-  },
-	exit: {
-    y: '-110%',
-		transition: { duration: 1.4, ease: [0.985, 0.010, 0.315, 0.830] }
-	}
-}
-
-export const logoUnderscore = {
-	initial: { x: '-110%' },
-  enter: { 
-    x: 0,
-    transition: { duration: 1.5, ease: [0.83, 0, 0.17, 1] }
-  },
-	exit: {
-    x: 0,
-		transition: { duration: 0.5, ease: [0.83, 0, 0.17, 1] }
-	}
-}
-
-export const logoReveal = {
-	initial: { opacity: 1, scale: 1 },
-  enter: { 
-    opacity: 0.10,
-    scale: 1,
-    transition: { duration: 1.25, ease: [0.985, 0.010, 0.315, 0.830], delay: 1.55 }
-  },
-	exit: {
-    opacity: 0.10,
-    scale: 1,
-		transition: { duration: 1.25, ease: [0.985, 0.010, 0.315, 0.830] }
-	}
-}
-
-export const revealUpDelay = {
-	initial: { y: '110%' },
-  enter: { 
-    y: 0,
-    transition: { duration: 1.4, ease: [0.985, 0.010, 0.315, 0.830], delay: 1.5 }
-  },
-	exit: {
-    y: '110%',
-		transition: { duration: 1.4, ease: [0.985, 0.010, 0.315, 0.830] }
-	}
-}
+import { reveal, revealLogoMask, revealDownDelay, logoUnderscore, logoReveal, revealUpDelay, fade } from '@/helpers/transitions'
 
 export default function Home() {
   const [samHovered, setSamHovered] = useState(false);
@@ -194,9 +121,9 @@ export default function Home() {
             </header>
 
             <section className="absolute top-0 left-0 p-4 z-40">
-              <div className="overflow-hidden relative mb-4 md:mb-5 xl:mb-7 mt-1 md:mt-2">
+              <div className="overflow-hidden relative mb-5 md:mb-7 xl:mb-9 mt-1 md:mt-2">
                 <m.span variants={revealUpDelay} className="block">
-                  <Link href="/"><a className="text-[65px] md:text-[90px] xl:text-[120px] block leading-[0.8] tracking-tight">Bio</a></Link>
+                  <Link href="/"><a className="text-[65px] md:text-[90px] xl:text-[120px] block leading-[0.8] tracking-tight nav-text">Bio</a></Link>
                 </m.span>
               </div>
               <div className="overflow-hidden relative">
