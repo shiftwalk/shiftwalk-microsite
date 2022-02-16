@@ -62,3 +62,13 @@ body {
   from {opacity: 0.1;}
   to {opacity: 0}
 }
+
+.Marquee {
+  @apply overflow-x-hidden;
+}
+
+.MarqueeContent {
+  will-change: transform;
+  width: 4000px;
+  @apply flex-row flex overflow-hidden whitespace-nowrap !important;
+}

@@ -10,6 +10,7 @@ import logoDark from '@/public/logoDark.svg'
 import { useTheme } from 'next-themes'
 import { revealLogoMask, revealDownDelay, logoUnderscore, logoReveal, revealUpDelay, fade } from '@/helpers/transitions'
 import { IntroContext } from '@/context/intro'
+import Marquee from 'react-smooth-marquee'
 
 export default function Works() {
   const [samHovered, setSamHovered] = useState(false);
@@ -156,7 +157,7 @@ export default function Works() {
                       <m.span variants={revealUpDelay} className="block relative">
                         <div className={`flex w-full`}>
                           <span className="w-3/12 text-left text-[10px] uppercase">Client</span>
-                          <span className="w-6/12 xl:w-5/12 text-left text-[10px] uppercase ml-auto">What We Did</span>
+                          <span className="w-6/12 xl:w-5/12 text-left text-[10px] uppercase ml-auto">Overview</span>
                           <span className="w-1/12 xl:w-2/12 text-left text-[10px] uppercase ml-auto">Agency</span>
                           <span className="w-1/12 text-right ml-auto text-[10px] uppercase mr-[12px] md:mr-[3px]">Launch</span>
                         </div>
@@ -177,75 +178,15 @@ export default function Works() {
                           <span className="w-3/12 text-left">Launch Project</span>
                           <span className="w-6/12 xl:w-5/12 text-left ml-auto relative block overflow-hidden">
                             <div className="relative overflow-hidden md:max-w-[355px] lg:max-w-[390px] xl:max-w-[500px]">
-                              <div className="animate-marquee whitespace-nowrap">
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                              </div>
-
-                              <div className="absolute top-0 animate-marquee2 whitespace-nowrap">
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                              </div>
+                              <Marquee velocity={0.065}>
+                                {[...Array(40)].map((index) => {
+                                  return (
+                                    <>
+                                      <span className="mx-2">Architectural Practice</span>
+                                      <span className="mx-1">&bull;</span>
+                                    </>
+                                )})}
+                              </Marquee>
                             </div>
                           </span>
                           <span className="w-1/12 xl:w-2/12 text-left ml-auto">-</span>
@@ -269,75 +210,15 @@ export default function Works() {
                           <span className="w-3/12 text-left">Launch Project</span>
                           <span className="w-6/12 xl:w-5/12 text-left ml-auto relative block overflow-hidden">
                             <div className="relative overflow-hidden md:max-w-[355px] lg:max-w-[390px] xl:max-w-[500px]">
-                              <div className="animate-marquee whitespace-nowrap">
-                                <span className="mx-2">Photographer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
-                                <span className="mx-1">&bull;</span>
-                              </div>
-
-                              <div className="absolute top-0 animate-marquee2 whitespace-nowrap">
-                                <span className="mx-2">Photographer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Photographer</span>
-                                <span className="mx-1">&bull;</span>
-                              </div>
+                              <Marquee velocity={0.065}>
+                                {[...Array(40)].map((index) => {
+                                  return (
+                                    <>
+                                      <span className="mx-2">Photographer</span>
+                                      <span className="mx-1">&bull;</span>
+                                    </>
+                                )})}
+                              </Marquee>
                             </div>
                           </span>
                           <span className="w-1/12 xl:w-2/12 text-left ml-auto">-</span>
@@ -360,75 +241,15 @@ export default function Works() {
                           <span className="w-3/12 text-left">Launch Project</span>
                           <span className="w-6/12 xl:w-5/12 text-left ml-auto relative block overflow-hidden">
                             <div className="relative overflow-hidden md:max-w-[355px] lg:max-w-[390px] xl:max-w-[500px]">
-                              <div className="animate-marquee whitespace-nowrap">
-                                <span className="mx-2">Singer + Producer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Singer + Producer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Singer + Producer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Singer + Producer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Singer + Producer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Singer + Producer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Singer + Producer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Singer + Producer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Singer + Producer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Singer + Producer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Singer + Producer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Singer + Producer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Singer + Producer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Singer + Producer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Singer + Producer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Singer + Producer</span>
-                                <span className="mx-1">&bull;</span>
-                              </div>
-
-                              <div className="absolute top-0 animate-marquee2 whitespace-nowrap">
-                                <span className="mx-2">Singer + Producer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Singer + Producer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Singer + Producer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Singer + Producer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Singer + Producer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Singer + Producer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Singer + Producer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Singer + Producer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Singer + Producer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Singer + Producer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Singer + Producer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Singer + Producer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Singer + Producer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Singer + Producer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Singer + Producer</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Singer + Producer</span>
-                                <span className="mx-1">&bull;</span>
-                              </div>
+                            <Marquee velocity={0.065}>
+                                {[...Array(40)].map((index) => {
+                                  return (
+                                    <>
+                                      <span className="mx-2">Singer + Producer</span>
+                                      <span className="mx-1">&bull;</span>
+                                    </>
+                                )})}
+                              </Marquee>
                             </div>
                           </span>
                           <span className="w-1/12 xl:w-2/12 text-left ml-auto">-</span>
@@ -451,75 +272,15 @@ export default function Works() {
                           <span className="w-3/12 text-left">Launch Project</span>
                           <span className="w-6/12 xl:w-5/12 text-left ml-auto relative block overflow-hidden">
                             <div className="relative overflow-hidden md:max-w-[355px] lg:max-w-[390px] xl:max-w-[500px]">
-                              <div className="animate-marquee whitespace-nowrap">
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                              </div>
-
-                              <div className="absolute top-0 animate-marquee2 whitespace-nowrap">
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Architectural Practice</span>
-                                <span className="mx-1">&bull;</span>
-                              </div>
+                            <Marquee velocity={0.065}>
+                                {[...Array(40)].map((index) => {
+                                  return (
+                                    <>
+                                      <span className="mx-2">Architectural Practice</span>
+                                      <span className="mx-1">&bull;</span>
+                                    </>
+                                )})}
+                              </Marquee>
                             </div>
                           </span>
                           <span className="w-1/12 xl:w-2/12 text-left ml-auto">-</span>
@@ -542,75 +303,15 @@ export default function Works() {
                           <span className="w-3/12 text-left">Launch Project</span>
                           <span className="w-6/12 xl:w-5/12 text-left ml-auto relative block overflow-hidden">
                             <div className="relative overflow-hidden md:max-w-[355px] lg:max-w-[390px] xl:max-w-[500px]">
-                              <div className="animate-marquee whitespace-nowrap">
-                                <span className="mx-2">Design Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Design Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Design Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Design Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Design Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Design Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Design Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Design Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Design Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Design Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Design Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Design Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Design Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Design Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Design Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Design Studio</span>
-                                <span className="mx-1">&bull;</span>
-                              </div>
-
-                              <div className="absolute top-0 animate-marquee2 whitespace-nowrap">
-                                <span className="mx-2">Design Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Design Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Design Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Design Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Design Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Design Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Design Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Design Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Design Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Design Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Design Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Design Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Design Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Design Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Design Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Design Studio</span>
-                                <span className="mx-1">&bull;</span>
-                              </div>
+                            <Marquee velocity={0.065}>
+                                {[...Array(40)].map((index) => {
+                                  return (
+                                    <>
+                                      <span className="mx-2">Design Studio</span>
+                                      <span className="mx-1">&bull;</span>
+                                    </>
+                                )})}
+                              </Marquee>
                             </div>
                           </span>
                           <span className="w-1/12 xl:w-2/12 text-left ml-auto">-</span>
@@ -633,75 +334,15 @@ export default function Works() {
                           <span className="w-3/12 text-left">Launch Project</span>
                           <span className="w-6/12 xl:w-5/12 text-left ml-auto relative block overflow-hidden">
                             <div className="relative overflow-hidden md:max-w-[355px] lg:max-w-[390px] xl:max-w-[500px]">
-                              <div className="animate-marquee whitespace-nowrap">
-                                <span className="mx-2">Motion Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Motion Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Motion Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Motion Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Motion Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Motion Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Motion Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Motion Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Motion Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Motion Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Motion Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Motion Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Motion Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Motion Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Motion Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Motion Studio</span>
-                                <span className="mx-1">&bull;</span>
-                              </div>
-
-                              <div className="absolute top-0 animate-marquee2 whitespace-nowrap">
-                                <span className="mx-2">Motion Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Motion Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Motion Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Motion Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Motion Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Motion Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Motion Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Motion Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Motion Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Motion Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Motion Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Motion Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Motion Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Motion Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Motion Studio</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Motion Studio</span>
-                                <span className="mx-1">&bull;</span>
-                              </div>
+                            <Marquee velocity={0.065}>
+                                {[...Array(40)].map((index) => {
+                                  return (
+                                    <>
+                                      <span className="mx-2">Motion Studio</span>
+                                      <span className="mx-1">&bull;</span>
+                                    </>
+                                )})}
+                              </Marquee>
                             </div>
                           </span>
                           <span className="w-1/12 xl:w-2/12 text-left ml-auto">-</span>
