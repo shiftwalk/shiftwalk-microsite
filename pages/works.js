@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { NextSeo } from 'next-seo';
 import Layout from '@/components/layout'
 import { LazyMotion, domAnimation, m } from "framer-motion"
@@ -8,16 +8,24 @@ import Link from 'next/link'
 import logo from '@/public/logo.svg'
 import logoDark from '@/public/logoDark.svg'
 import { useTheme } from 'next-themes'
-import { reveal, revealLogoMask, revealDownDelay, logoUnderscore, logoReveal, revealUpDelay, fade } from '@/helpers/transitions'
+import { revealLogoMask, revealDownDelay, logoUnderscore, logoReveal, revealUpDelay, fade } from '@/helpers/transitions'
+import { IntroContext } from '@/context/intro'
 
 export default function Works() {
   const [samHovered, setSamHovered] = useState(false);
   const [isaacHovered, setIsaacHovered] = useState(false);
+  const [introContext, setIntroContext] = useContext(IntroContext);
 
   const toggleSamHover = () => setSamHovered(!samHovered);
   const toggleIsaacHover = () => setIsaacHovered(!isaacHovered);
 
   const {theme, setTheme} = useTheme()
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIntroContext(true)
+    }, 1500);
+  },[]);
 
   return (
     <Layout>
@@ -54,9 +62,11 @@ export default function Works() {
 
             <div className={`fixed inset-0 flex items-start md:items-center justify-center transition ease-in-out duration-500 z-10 mt-[35vh] md:mt-0 md:pt-0  ${samHovered || isaacHovered ? 'opacity-0' : 'opacity-100' }`}>
               <m.div variants={logoReveal} className="relative overflow-hidden">
-                <m.div variants={logoUnderscore} className="absolute bottom-0 left-0 mb-[0px] ml-[0px] xl:mb-[1.25px] xl:ml-[1.25px] w-[16px] h-[4px] md:w-[20px] md:h-[5px] xl:w-[23px] bg-black dark:bg-off-grey"></m.div>
+                <m.div variants={logoUnderscore} className="absolute bottom-0 z-10 left-0 mb-[0px] ml-[0px] xl:mb-[1.25px] xl:ml-[1.25px] w-[16px] h-[4px] md:w-[20px] md:h-[5px] xl:w-[23px] dark:bg-off-grey bg-black"></m.div>
 
-                <div className="absolute bottom-0 left-0 mb-[0px] ml-[0px] xl:mb-[1.25px] xl:ml-[1.25px] w-[16px] h-[4px] md:w-[20px] md:h-[5px] xl:w-[23px] bg-black dark:bg-off-grey opacity-10"></div>
+                {!introContext && (
+                  <div className="absolute bottom-0 left-0 mb-[0px] ml-[0px] xl:mb-[1.25px] xl:ml-[1.25px] w-[16px] h-[4px] md:w-[20px] md:h-[5px] xl:w-[23px] dark:bg-off-grey bg-black bg-opacity-10 dark:bg-opacity-10"></div>
+                )}
 
                 <div className="overflow-hidden text-black relative z-10">                  
                   <m.div variants={revealLogoMask} className="absolute inset-0 ml-[18px] md:ml-[22px] xl:ml-[24px] bg-off-grey dark:bg-black opacity-90 z-10"></m.div>
@@ -124,7 +134,7 @@ export default function Works() {
               <div className="overflow-hidden relative mb-4 md:mb-5 xl:mb-7 mt-1 md:mt-2">
                 <m.span variants={revealUpDelay} className="block">
                   <Link href="/">
-                    <a className="text-[65px] md:text-[90px] xl:text-[120px] block leading-[0.8] tracking-tight text-[#93978F] dark:text-[#3E3E3E] transition-colors ease-in-out duration-500 relative overflow-hidden nav-text" data-text="Bio">
+                    <a className="text-[65px] md:text-[90px] xl:text-[120px] block leading-[0.8] tracking-tight text-black dark:text-off-grey text-opacity-10 dark:text-opacity-10 transition-colors ease-in-out duration-500 relative overflow-hidden nav-text" data-text="Bio">
                       Bio
                     </a>
                   </Link>
@@ -132,7 +142,7 @@ export default function Works() {
               </div>
               <div className="overflow-hidden relative">
                 <m.span variants={revealUpDelay} className="block">
-                  <Link href="/works"><a className="text-[65px] md:text-[90px] xl:text-[120px] block leading-[0.8] tracking-tight ml-[2px] md:ml-[4px] xl:ml-[5px] nav-text">Works</a></Link>
+                  <Link href="/works"><a className="text-[65px] md:text-[90px] xl:text-[120px] block leading-[0.8] tracking-tight ml-[2px] md:ml-[4px] xl:ml-[5px] nav-text nav-text--active">Works</a></Link>
                 </m.span>
               </div>
             </section>
@@ -165,82 +175,82 @@ export default function Works() {
 
                         <div className="absolute transition-all ease-in-out duration-500 top-0 left-0 -mt-10 group-hover:translate-y-10 group-focus:translate-y-10 opacity-0 group-hover:opacity-100 group-focus:opacity-100 flex w-full text-left right-0">
                           <span className="w-3/12 text-left">Launch Project</span>
-                            <span className="w-6/12 xl:w-5/12 text-left ml-auto relative block overflow-hidden">
-                              <div className="relative overflow-hidden md:max-w-[355px] lg:max-w-[390px] xl:max-w-[500px]">
-                                <div className="animate-marquee whitespace-nowrap">
-                                  <span className="mx-2">Rethinking Property Development</span>
-                                  <span className="mx-1">&bull;</span>
-                                  <span className="mx-2">Rethinking Property Development</span>
-                                  <span className="mx-1">&bull;</span>
-                                  <span className="mx-2">Rethinking Property Development</span>
-                                  <span className="mx-1">&bull;</span>
-                                  <span className="mx-2">Rethinking Property Development</span>
-                                  <span className="mx-1">&bull;</span>
-                                  <span className="mx-2">Rethinking Property Development</span>
-                                  <span className="mx-1">&bull;</span>
-                                  <span className="mx-2">Rethinking Property Development</span>
-                                  <span className="mx-1">&bull;</span>
-                                  <span className="mx-2">Rethinking Property Development</span>
-                                  <span className="mx-1">&bull;</span>
-                                  <span className="mx-2">Rethinking Property Development</span>
-                                  <span className="mx-1">&bull;</span>
-                                  <span className="mx-2">Rethinking Property Development</span>
-                                  <span className="mx-1">&bull;</span>
-                                  <span className="mx-2">Rethinking Property Development</span>
-                                  <span className="mx-1">&bull;</span>
-                                  <span className="mx-2">Rethinking Property Development</span>
-                                  <span className="mx-1">&bull;</span>
-                                  <span className="mx-2">Rethinking Property Development</span>
-                                  <span className="mx-1">&bull;</span>
-                                  <span className="mx-2">Rethinking Property Development</span>
-                                  <span className="mx-1">&bull;</span>
-                                  <span className="mx-2">Rethinking Property Development</span>
-                                  <span className="mx-1">&bull;</span>
-                                  <span className="mx-2">Rethinking Property Development</span>
-                                  <span className="mx-1">&bull;</span>
-                                  <span className="mx-2">Rethinking Property Development</span>
-                                  <span className="mx-1">&bull;</span>
-                                </div>
-
-                                <div className="absolute top-0 animate-marquee2 whitespace-nowrap">
-                                  <span className="mx-2">Rethinking Property Development</span>
-                                  <span className="mx-1">&bull;</span>
-                                  <span className="mx-2">Rethinking Property Development</span>
-                                  <span className="mx-1">&bull;</span>
-                                  <span className="mx-2">Rethinking Property Development</span>
-                                  <span className="mx-1">&bull;</span>
-                                  <span className="mx-2">Rethinking Property Development</span>
-                                  <span className="mx-1">&bull;</span>
-                                  <span className="mx-2">Rethinking Property Development</span>
-                                  <span className="mx-1">&bull;</span>
-                                  <span className="mx-2">Rethinking Property Development</span>
-                                  <span className="mx-1">&bull;</span>
-                                  <span className="mx-2">Rethinking Property Development</span>
-                                  <span className="mx-1">&bull;</span>
-                                  <span className="mx-2">Rethinking Property Development</span>
-                                  <span className="mx-1">&bull;</span>
-                                  <span className="mx-2">Rethinking Property Development</span>
-                                  <span className="mx-1">&bull;</span>
-                                  <span className="mx-2">Rethinking Property Development</span>
-                                  <span className="mx-1">&bull;</span>
-                                  <span className="mx-2">Rethinking Property Development</span>
-                                  <span className="mx-1">&bull;</span>
-                                  <span className="mx-2">Rethinking Property Development</span>
-                                  <span className="mx-1">&bull;</span>
-                                  <span className="mx-2">Rethinking Property Development</span>
-                                  <span className="mx-1">&bull;</span>
-                                  <span className="mx-2">Rethinking Property Development</span>
-                                  <span className="mx-1">&bull;</span>
-                                  <span className="mx-2">Rethinking Property Development</span>
-                                  <span className="mx-1">&bull;</span>
-                                  <span className="mx-2">Rethinking Property Development</span>
-                                  <span className="mx-1">&bull;</span>
-                                </div>
+                          <span className="w-6/12 xl:w-5/12 text-left ml-auto relative block overflow-hidden">
+                            <div className="relative overflow-hidden md:max-w-[355px] lg:max-w-[390px] xl:max-w-[500px]">
+                              <div className="animate-marquee whitespace-nowrap">
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
                               </div>
-                            </span>
-                            <span className="w-1/12 xl:w-2/12 text-left ml-auto">-</span>
-                            <span className="w-1/12 text-right ml-auto group-hover:-translate-y-10 group-focus:-translate-y-10 transition-transform ease-in-out duration-500"></span>
-                          </div>
+
+                              <div className="absolute top-0 animate-marquee2 whitespace-nowrap">
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                              </div>
+                            </div>
+                          </span>
+                          <span className="w-1/12 xl:w-2/12 text-left ml-auto">-</span>
+                          <span className="w-1/12 text-right ml-auto group-hover:-translate-y-10 group-focus:-translate-y-10 transition-transform ease-in-out duration-500"></span>
+                        </div>
                       </m.span>
                     </a>
                   </div>
@@ -255,7 +265,82 @@ export default function Works() {
                         </div>
 
                         <div className="absolute transition-all ease-in-out duration-500 top-0 left-0 -mt-10 group-hover:translate-y-10 group-focus:translate-y-10 opacity-0 group-hover:opacity-100 group-focus:opacity-100 flex w-full text-left right-0">
-                          <span className="block flex-1 text-left">Launch Project</span>
+                          <span className="w-3/12 text-left">Launch Project</span>
+                          <span className="w-6/12 xl:w-5/12 text-left ml-auto relative block overflow-hidden">
+                            <div className="relative overflow-hidden md:max-w-[355px] lg:max-w-[390px] xl:max-w-[500px]">
+                              <div className="animate-marquee whitespace-nowrap">
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                              </div>
+
+                              <div className="absolute top-0 animate-marquee2 whitespace-nowrap">
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Architectural Practice</span>
+                                <span className="mx-1">&bull;</span>
+                              </div>
+                            </div>
+                          </span>
+                          <span className="w-1/12 xl:w-2/12 text-left ml-auto">-</span>
+                          <span className="w-1/12 text-right ml-auto group-hover:-translate-y-10 group-focus:-translate-y-10 transition-transform ease-in-out duration-500"></span>
                         </div>
                       </m.span>
                     </a>
@@ -270,8 +355,83 @@ export default function Works() {
                           <span className="w-1/12 text-right ml-auto group-hover:-translate-y-10 group-focus:-translate-y-10 transition-transform ease-in-out duration-500"><span className="inline-block transform -rotate-45 group-hover:rotate-0 group-focus:rotate-0 transition-transform ease-in-out duration-300">→</span></span>
                         </div>
 
-                        <div className="absolute transition-all ease-in-out duration-500 top-0 left-0 right-0 -mt-10 group-hover:translate-y-10 group-focus:translate-y-10 opacity-0 group-hover:opacity-100 group-focus:opacity-100 flex w-full">
-                          <span className="block flex-1 text-left">Launch Project</span>
+                        <div className="absolute transition-all ease-in-out duration-500 top-0 left-0 -mt-10 group-hover:translate-y-10 group-focus:translate-y-10 opacity-0 group-hover:opacity-100 group-focus:opacity-100 flex w-full text-left right-0">
+                          <span className="w-3/12 text-left">Launch Project</span>
+                          <span className="w-6/12 xl:w-5/12 text-left ml-auto relative block overflow-hidden">
+                            <div className="relative overflow-hidden md:max-w-[355px] lg:max-w-[390px] xl:max-w-[500px]">
+                              <div className="animate-marquee whitespace-nowrap">
+                                <span className="mx-2">Singer + Producer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Singer + Producer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Singer + Producer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Singer + Producer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Singer + Producer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Singer + Producer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Singer + Producer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Singer + Producer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Singer + Producer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Singer + Producer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Singer + Producer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Singer + Producer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Singer + Producer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Singer + Producer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Singer + Producer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Singer + Producer</span>
+                                <span className="mx-1">&bull;</span>
+                              </div>
+
+                              <div className="absolute top-0 animate-marquee2 whitespace-nowrap">
+                                <span className="mx-2">Singer + Producer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Singer + Producer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Singer + Producer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Singer + Producer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Singer + Producer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Singer + Producer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Singer + Producer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Singer + Producer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Singer + Producer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Singer + Producer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Singer + Producer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Singer + Producer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Singer + Producer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Singer + Producer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Singer + Producer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Singer + Producer</span>
+                                <span className="mx-1">&bull;</span>
+                              </div>
+                            </div>
+                          </span>
+                          <span className="w-1/12 xl:w-2/12 text-left ml-auto">-</span>
+                          <span className="w-1/12 text-right ml-auto group-hover:-translate-y-10 group-focus:-translate-y-10 transition-transform ease-in-out duration-500"></span>
                         </div>
                       </m.span>
                     </a>
@@ -287,7 +447,82 @@ export default function Works() {
                         </div>
 
                         <div className="absolute transition-all ease-in-out duration-500 top-0 left-0 -mt-10 group-hover:translate-y-10 group-focus:translate-y-10 opacity-0 group-hover:opacity-100 group-focus:opacity-100 flex w-full text-left right-0">
-                          <span className="block flex-1 text-left">Launch Project</span>
+                          <span className="w-3/12 text-left">Launch Project</span>
+                          <span className="w-6/12 xl:w-5/12 text-left ml-auto relative block overflow-hidden">
+                            <div className="relative overflow-hidden md:max-w-[355px] lg:max-w-[390px] xl:max-w-[500px]">
+                              <div className="animate-marquee whitespace-nowrap">
+                                <span className="mx-2">Photographer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Photographer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Photographer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Photographer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Photographer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Photographer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Photographer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Photographer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Photographer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Photographer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Photographer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Photographer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Photographer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Photographer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Photographer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Photographer</span>
+                                <span className="mx-1">&bull;</span>
+                              </div>
+
+                              <div className="absolute top-0 animate-marquee2 whitespace-nowrap">
+                                <span className="mx-2">Photographer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Photographer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Photographer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Photographer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Photographer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Photographer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Photographer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Photographer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Photographer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Photographer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Photographer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Photographer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Photographer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Photographer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Photographer</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Photographer</span>
+                                <span className="mx-1">&bull;</span>
+                              </div>
+                            </div>
+                          </span>
+                          <span className="w-1/12 xl:w-2/12 text-left ml-auto">-</span>
+                          <span className="w-1/12 text-right ml-auto group-hover:-translate-y-10 group-focus:-translate-y-10 transition-transform ease-in-out duration-500"></span>
                         </div>
                       </m.span>
                     </a>
@@ -303,7 +538,82 @@ export default function Works() {
                         </div>
 
                         <div className="absolute transition-all ease-in-out duration-500 top-0 left-0 -mt-10 group-hover:translate-y-10 group-focus:translate-y-10 opacity-0 group-hover:opacity-100 group-focus:opacity-100 flex w-full text-left right-0">
-                          <span className="block flex-1 text-left">Launch Project</span>
+                          <span className="w-3/12 text-left">Launch Project</span>
+                          <span className="w-6/12 xl:w-5/12 text-left ml-auto relative block overflow-hidden">
+                            <div className="relative overflow-hidden md:max-w-[355px] lg:max-w-[390px] xl:max-w-[500px]">
+                              <div className="animate-marquee whitespace-nowrap">
+                                <span className="mx-2">Design Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Design Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Design Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Design Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Design Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Design Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Design Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Design Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Design Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Design Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Design Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Design Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Design Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Design Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Design Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Design Studio</span>
+                                <span className="mx-1">&bull;</span>
+                              </div>
+
+                              <div className="absolute top-0 animate-marquee2 whitespace-nowrap">
+                                <span className="mx-2">Design Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Design Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Design Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Design Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Design Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Design Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Design Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Design Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Design Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Design Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Design Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Design Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Design Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Design Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Design Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Design Studio</span>
+                                <span className="mx-1">&bull;</span>
+                              </div>
+                            </div>
+                          </span>
+                          <span className="w-1/12 xl:w-2/12 text-left ml-auto">-</span>
+                          <span className="w-1/12 text-right ml-auto group-hover:-translate-y-10 group-focus:-translate-y-10 transition-transform ease-in-out duration-500"></span>
                         </div>
                       </m.span>
                     </a>
@@ -319,7 +629,82 @@ export default function Works() {
                         </div>
 
                         <div className="absolute transition-all ease-in-out duration-500 top-0 left-0 -mt-10 group-hover:translate-y-10 group-focus:translate-y-10 opacity-0 group-hover:opacity-100 group-focus:opacity-100 flex w-full text-left right-0">
-                          <span className="block flex-1 text-left">Launch Project</span>
+                          <span className="w-3/12 text-left">Launch Project</span>
+                          <span className="w-6/12 xl:w-5/12 text-left ml-auto relative block overflow-hidden">
+                            <div className="relative overflow-hidden md:max-w-[355px] lg:max-w-[390px] xl:max-w-[500px]">
+                              <div className="animate-marquee whitespace-nowrap">
+                                <span className="mx-2">Motion Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Motion Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Motion Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Motion Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Motion Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Motion Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Motion Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Motion Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Motion Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Motion Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Motion Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Motion Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Motion Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Motion Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Motion Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Motion Studio</span>
+                                <span className="mx-1">&bull;</span>
+                              </div>
+
+                              <div className="absolute top-0 animate-marquee2 whitespace-nowrap">
+                                <span className="mx-2">Motion Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Motion Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Motion Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Motion Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Motion Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Motion Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Motion Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Motion Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Motion Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Motion Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Motion Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Motion Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Motion Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Motion Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Motion Studio</span>
+                                <span className="mx-1">&bull;</span>
+                                <span className="mx-2">Motion Studio</span>
+                                <span className="mx-1">&bull;</span>
+                              </div>
+                            </div>
+                          </span>
+                          <span className="w-1/12 xl:w-2/12 text-left ml-auto">-</span>
+                          <span className="w-1/12 text-right ml-auto group-hover:-translate-y-10 group-focus:-translate-y-10 transition-transform ease-in-out duration-500"></span>
                         </div>
                       </m.span>
                     </a>

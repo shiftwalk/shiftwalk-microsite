@@ -52,3 +52,13 @@ body {
     animation-play-state: running;
   }
 }
+
+.underscore {
+  animation-name: underscore;
+  animation-duration: 1s;
+}
+
+@keyframes underscore {
+  from {opacity: 0.1;}
+  to {opacity: 0}
+}

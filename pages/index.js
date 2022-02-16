@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { NextSeo } from 'next-seo';
 import Layout from '@/components/layout'
 import { LazyMotion, domAnimation, m } from "framer-motion"
@@ -8,16 +8,24 @@ import logo from '@/public/logo.svg'
 import Link from 'next/link'
 import logoDark from '@/public/logoDark.svg'
 import { useTheme } from 'next-themes'
-import { reveal, revealLogoMask, revealDownDelay, logoUnderscore, logoReveal, revealUpDelay, fade } from '@/helpers/transitions'
+import { revealLogoMask, revealDownDelay, logoUnderscore, logoReveal, revealUpDelay, fade } from '@/helpers/transitions'
+import { IntroContext } from '@/context/intro'
 
 export default function Home() {
   const [samHovered, setSamHovered] = useState(false);
   const [isaacHovered, setIsaacHovered] = useState(false);
+  const [introContext, setIntroContext] = useContext(IntroContext);
 
   const toggleSamHover = () => setSamHovered(!samHovered);
   const toggleIsaacHover = () => setIsaacHovered(!isaacHovered);
 
   const {theme, setTheme} = useTheme()
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIntroContext(true)
+    }, 1500);
+  },[]);
 
   return (
     <Layout>
@@ -54,9 +62,11 @@ export default function Home() {
 
             <div className={`fixed inset-0 flex items-start md:items-center justify-center transition ease-in-out duration-500 z-10 mt-[35vh] md:mt-0 md:pt-0  ${samHovered || isaacHovered ? 'opacity-0' : 'opacity-100' }`}>
               <m.div variants={logoReveal} className="relative overflow-hidden">
-                <m.div variants={logoUnderscore} className="absolute bottom-0 left-0 mb-[0px] ml-[0px] xl:mb-[1.25px] xl:ml-[1.25px] w-[16px] h-[4px] md:w-[20px] md:h-[5px] xl:w-[23px] bg-black dark:bg-off-grey"></m.div>
+                <m.div variants={logoUnderscore} className="absolute bottom-0 z-10 left-0 mb-[0px] ml-[0px] xl:mb-[1.25px] xl:ml-[1.25px] w-[16px] h-[4px] md:w-[20px] md:h-[5px] xl:w-[23px] dark:bg-off-grey bg-black"></m.div>
 
-                <div className="absolute bottom-0 left-0 mb-[0px] ml-[0px] xl:mb-[1.25px] xl:ml-[1.25px] w-[16px] h-[4px] md:w-[20px] md:h-[5px] xl:w-[23px] bg-black dark:bg-off-grey opacity-10"></div>
+                {!introContext && (
+                  <div className="absolute bottom-0 left-0 mb-[0px] ml-[0px] xl:mb-[1.25px] xl:ml-[1.25px] w-[16px] h-[4px] md:w-[20px] md:h-[5px] xl:w-[23px] dark:bg-off-grey bg-black bg-opacity-10 dark:bg-opacity-10"></div>
+                )}
 
                 <div className="overflow-hidden text-black relative z-10">                  
                   <m.div variants={revealLogoMask} className="absolute inset-0 ml-[18px] md:ml-[22px] xl:ml-[24px] bg-off-grey dark:bg-black opacity-90 z-10"></m.div>
@@ -123,13 +133,13 @@ export default function Home() {
             <section className="absolute top-0 left-0 p-4 z-40">
               <div className="overflow-hidden relative mb-5 md:mb-7 xl:mb-9 mt-1 md:mt-2">
                 <m.span variants={revealUpDelay} className="block">
-                  <Link href="/"><a className="text-[65px] md:text-[90px] xl:text-[120px] block leading-[0.8] tracking-tight nav-text">Bio</a></Link>
+                  <Link href="/"><a className="text-[65px] md:text-[90px] xl:text-[120px] block leading-[0.8] tracking-tight nav-text nav-text--active">Bio</a></Link>
                 </m.span>
               </div>
               <div className="overflow-hidden relative">
                 <m.span variants={revealUpDelay} className="block">
                   <Link href="/works">
-                    <a className="text-[65px] md:text-[90px] xl:text-[120px] block leading-[0.8] tracking-tight text-[#93978F] dark:text-[#3E3E3E] transition-colors ease-in-out duration-500 relative overflow-hidden nav-text ml-[2px] md:ml-[4px] xl:ml-[5px]" data-text="Works">
+                    <a className="text-[65px] md:text-[90px] xl:text-[120px] block leading-[0.8] tracking-tight text-black dark:text-off-grey text-opacity-10 dark:text-opacity-10 transition-colors ease-in-out duration-500 relative overflow-hidden nav-text ml-[2px] md:ml-[4px] xl:ml-[5px] " data-text="Works">
                       Works
                     </a>
                   </Link>
