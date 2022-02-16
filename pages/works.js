@@ -249,8 +249,83 @@ export default function Works() {
                         </div>
 
                         <div className="absolute transition-all ease-in-out duration-500 top-0 left-0 -mt-10 group-hover:translate-y-10 group-focus:translate-y-10 opacity-0 group-hover:opacity-100 group-focus:opacity-100 flex w-full text-left right-0">
-                          <span className="block flex-1 text-left">Launch Project</span>
-                        </div>
+                          <span className="w-3/12 text-left">Launch Project</span>
+                            <span className="w-6/12 xl:w-5/12 text-left ml-auto relative block overflow-hidden">
+                              <div className="relative overflow-hidden md:max-w-[355px] lg:max-w-[390px] xl:max-w-[500px]">
+                                <div className="animate-marquee whitespace-nowrap">
+                                  <span className="mx-2">Rethinking Property Development</span>
+                                  <span className="mx-1">&bull;</span>
+                                  <span className="mx-2">Rethinking Property Development</span>
+                                  <span className="mx-1">&bull;</span>
+                                  <span className="mx-2">Rethinking Property Development</span>
+                                  <span className="mx-1">&bull;</span>
+                                  <span className="mx-2">Rethinking Property Development</span>
+                                  <span className="mx-1">&bull;</span>
+                                  <span className="mx-2">Rethinking Property Development</span>
+                                  <span className="mx-1">&bull;</span>
+                                  <span className="mx-2">Rethinking Property Development</span>
+                                  <span className="mx-1">&bull;</span>
+                                  <span className="mx-2">Rethinking Property Development</span>
+                                  <span className="mx-1">&bull;</span>
+                                  <span className="mx-2">Rethinking Property Development</span>
+                                  <span className="mx-1">&bull;</span>
+                                  <span className="mx-2">Rethinking Property Development</span>
+                                  <span className="mx-1">&bull;</span>
+                                  <span className="mx-2">Rethinking Property Development</span>
+                                  <span className="mx-1">&bull;</span>
+                                  <span className="mx-2">Rethinking Property Development</span>
+                                  <span className="mx-1">&bull;</span>
+                                  <span className="mx-2">Rethinking Property Development</span>
+                                  <span className="mx-1">&bull;</span>
+                                  <span className="mx-2">Rethinking Property Development</span>
+                                  <span className="mx-1">&bull;</span>
+                                  <span className="mx-2">Rethinking Property Development</span>
+                                  <span className="mx-1">&bull;</span>
+                                  <span className="mx-2">Rethinking Property Development</span>
+                                  <span className="mx-1">&bull;</span>
+                                  <span className="mx-2">Rethinking Property Development</span>
+                                  <span className="mx-1">&bull;</span>
+                                </div>
+
+                                <div className="absolute top-0 animate-marquee2 whitespace-nowrap">
+                                  <span className="mx-2">Rethinking Property Development</span>
+                                  <span className="mx-1">&bull;</span>
+                                  <span className="mx-2">Rethinking Property Development</span>
+                                  <span className="mx-1">&bull;</span>
+                                  <span className="mx-2">Rethinking Property Development</span>
+                                  <span className="mx-1">&bull;</span>
+                                  <span className="mx-2">Rethinking Property Development</span>
+                                  <span className="mx-1">&bull;</span>
+                                  <span className="mx-2">Rethinking Property Development</span>
+                                  <span className="mx-1">&bull;</span>
+                                  <span className="mx-2">Rethinking Property Development</span>
+                                  <span className="mx-1">&bull;</span>
+                                  <span className="mx-2">Rethinking Property Development</span>
+                                  <span className="mx-1">&bull;</span>
+                                  <span className="mx-2">Rethinking Property Development</span>
+                                  <span className="mx-1">&bull;</span>
+                                  <span className="mx-2">Rethinking Property Development</span>
+                                  <span className="mx-1">&bull;</span>
+                                  <span className="mx-2">Rethinking Property Development</span>
+                                  <span className="mx-1">&bull;</span>
+                                  <span className="mx-2">Rethinking Property Development</span>
+                                  <span className="mx-1">&bull;</span>
+                                  <span className="mx-2">Rethinking Property Development</span>
+                                  <span className="mx-1">&bull;</span>
+                                  <span className="mx-2">Rethinking Property Development</span>
+                                  <span className="mx-1">&bull;</span>
+                                  <span className="mx-2">Rethinking Property Development</span>
+                                  <span className="mx-1">&bull;</span>
+                                  <span className="mx-2">Rethinking Property Development</span>
+                                  <span className="mx-1">&bull;</span>
+                                  <span className="mx-2">Rethinking Property Development</span>
+                                  <span className="mx-1">&bull;</span>
+                                </div>
+                              </div>
+                            </span>
+                            <span className="w-1/12 xl:w-2/12 text-left ml-auto">-</span>
+                            <span className="w-1/12 text-right ml-auto group-hover:-translate-y-10 group-focus:-translate-y-10 transition-transform ease-in-out duration-500"></span>
+                          </div>
                       </m.span>
                     </a>
                   </div>
