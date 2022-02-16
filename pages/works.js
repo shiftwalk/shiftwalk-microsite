@@ -133,9 +133,9 @@ export default function Works() {
           initial="initial"
           animate="enter"
           exit="exit"
-          className="w-full h-full"
+          className="w-full md:h-full"
         >
-          <Div100vh className="flex flex-wrap p-4 md:p-5 text-[18px] leading-[24px] md:text-[20px] md:leading-[27px] xl:text-[24px] xl:leading-[31px] selection:bg-black selection:text-off-grey dark:selection:bg-off-grey dark:selection:text-black">
+          <div className="flex flex-wrap md:min-h-screen p-4 md:p-5 text-[18px] leading-[24px] md:text-[20px] md:leading-[27px] xl:text-[24px] xl:leading-[31px] selection:bg-black selection:text-off-grey dark:selection:bg-off-grey dark:selection:text-black">
 
             <div className={`fixed inset-0 flex items-start md:items-center justify-center transition ease-in-out duration-500 z-10 mt-[35vh] md:mt-0 md:pt-0  ${samHovered || isaacHovered ? 'opacity-0' : 'opacity-100' }`}>
               <m.div variants={logoReveal} className="relative overflow-hidden">
@@ -223,7 +223,7 @@ export default function Works() {
             </section>
             
             
-            <section className="mt-auto self-end flex items-end w-full relative z-30">
+            <section className="mt-auto self-end items-end w-full relative z-30 hidden md:flex text-[18px] leading-[24px] md:text-[17px] md:leading-[24px] lg:text-[19px] lg:leading-[26px] xl:text-[24px] xl:leading-[31px]">
               <m.div variants={fade} className="w-full">
                 <div className={`ml-auto w-full border-b border-black dark:border-off-grey text-right block mr-5`}>
                   <div className="pb-1 border-b border-black dark:border-off-grey">
@@ -231,111 +231,20 @@ export default function Works() {
                       <m.span variants={revealUpDelay} className="block relative">
                         <div className={`flex w-full`}>
                           <span className="w-3/12 text-left text-[10px] uppercase">Client</span>
-                          <span className="w-5/12 text-left text-[10px] uppercase ml-auto">What We Did</span>
-                          <span className="w-2/12 text-left text-[10px] uppercase ml-auto">Agency</span>
+                          <span className="w-6/12 xl:w-5/12 text-left text-[10px] uppercase ml-auto">What We Did</span>
+                          <span className="w-1/12 xl:w-2/12 text-left text-[10px] uppercase ml-auto">Agency</span>
                           <span className="w-1/12 text-right ml-auto text-[10px] uppercase mr-[12px] md:mr-[3px]">Launch</span>
                         </div>
                       </m.span>
                     </div>
                   </div>
                   <div className="py-2 border-b border-black dark:border-off-grey">
-                    <a href="https://www.field.energy/" target="_blank" rel="noreferrer noopener" className="block overflow-hidden group focus:border-none focus:outline-none work-item">
-                      <m.span variants={revealUpDelay} className="block relative">
-                        <div className={`flex transition-transform ease-in-out duration-500 group-hover:translate-y-10 group-focus:translate-y-10`}>
-                          <span className="w-3/12 text-left">Field Energy</span>
-                          <span className="w-5/12 text-left ml-auto">Interactive Design, Build</span>
-                          <span className="w-2/12 text-left ml-auto">Ragged Edge</span>
-                          <span className="w-1/12 text-right ml-auto group-hover:-translate-y-10 group-focus:-translate-y-10 transition-transform ease-in-out duration-500"><span className="inline-block transform -rotate-45 group-hover:rotate-0 group-focus:rotate-0 transition-transform ease-in-out duration-300">→</span></span>
-                        </div>
-
-                        <div className="absolute transition-all ease-in-out duration-500 top-0 left-0 -mt-10 group-hover:translate-y-10 group-focus:translate-y-10 opacity-0 group-hover:opacity-100 group-focus:opacity-100 flex w-full text-left right-0">
-                          <span className="w-3/12 text-left">Launch Project</span>
-                          <span className="w-5/12 text-left ml-auto relative block overflow-hidden md:pr-16">
-                            <div className="relative overflow-hidden max-w-[600px]">
-                              <div className="animate-marquee whitespace-nowrap">
-                                <span className="mx-2">Road to Net Zero</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Road to Net Zero</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Road to Net Zero</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Road to Net Zero</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Road to Net Zero</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Road to Net Zero</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Road to Net Zero</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Road to Net Zero</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Road to Net Zero</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Road to Net Zero</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Road to Net Zero</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Road to Net Zero</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Road to Net Zero</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Road to Net Zero</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Road to Net Zero</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Road to Net Zero</span>
-                                <span className="mx-1">&bull;</span>
-                              </div>
-
-                              <div className="absolute top-0 animate-marquee2 whitespace-nowrap">
-                                <span className="mx-2">Road to Net Zero</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Road to Net Zero</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Road to Net Zero</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Road to Net Zero</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Road to Net Zero</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Road to Net Zero</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Road to Net Zero</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Road to Net Zero</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Road to Net Zero</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Road to Net Zero</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Road to Net Zero</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Road to Net Zero</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Road to Net Zero</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Road to Net Zero</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Road to Net Zero</span>
-                                <span className="mx-1">&bull;</span>
-                                <span className="mx-2">Road to Net Zero</span>
-                                <span className="mx-1">&bull;</span>
-                              </div>
-                            </div>
-                          </span>
-                          <span className="w-2/12 text-left ml-auto">Ragged Edge</span>
-                          <span className="w-1/12 text-right ml-auto group-hover:-translate-y-10 group-focus:-translate-y-10 transition-transform ease-in-out duration-500"></span>
-                        </div>
-                      </m.span>
-                    </a>
-                  </div>
-                  <div className="py-2 border-b border-black dark:border-off-grey">
                     <a href="https://www.reform-property.com/" target="_blank" rel="noreferrer noopener" className="block overflow-hidden group focus:border-none focus:outline-none">
                       <m.span variants={revealUpDelay} className="block relative">
                         <div className={`flex transition-transform ease-in-out duration-500 group-hover:translate-y-10 group-focus:translate-y-10`}>
                           <span className="w-3/12 text-left">Reform</span>
-                          <span className="w-5/12 text-left ml-auto">Brand, Art Direction, Interactive Design, Build</span>
-                          <span className="w-2/12 text-left ml-auto">-</span>
+                          <span className="w-6/12 xl:w-5/12 text-left ml-auto">Brand, Art Direction, Interactive Design, Build</span>
+                          <span className="w-1/12 xl:w-2/12 text-left ml-auto">-</span>
                           <span className="w-1/12 text-right ml-auto group-hover:-translate-y-10 group-focus:-translate-y-10 transition-transform ease-in-out duration-500"><span className="inline-block transform -rotate-45 group-hover:rotate-0 group-focus:rotate-0 transition-transform ease-in-out duration-300">→</span></span>
                         </div>
 
@@ -350,8 +259,8 @@ export default function Works() {
                       <m.span variants={revealUpDelay} className="block relative">
                         <div className={`flex transition-transform ease-in-out duration-500 group-hover:translate-y-10 group-focus:translate-y-10`}>
                           <span className="w-3/12 text-left">PRB Architects</span>
-                          <span className="w-5/12 text-left ml-auto">Brand, Art Direction, Interactive Design, Build</span>
-                          <span className="w-2/12 text-left ml-auto">-</span>
+                          <span className="w-6/12 xl:w-5/12 text-left ml-auto">Brand, Art Direction, Interactive Design, Build</span>
+                          <span className="w-1/12 xl:w-2/12 text-left ml-auto">-</span>
                           <span className="w-1/12 text-right ml-auto group-hover:-translate-y-10 group-focus:-translate-y-10 transition-transform ease-in-out duration-500"><span className="inline-block transform -rotate-45 group-hover:rotate-0 group-focus:rotate-0 transition-transform ease-in-out duration-300">→</span></span>
                         </div>
 
@@ -366,8 +275,8 @@ export default function Works() {
                       <m.span variants={revealUpDelay} className="block relative">
                         <div className={`flex transition-transform ease-in-out duration-500 group-hover:translate-y-10 group-focus:translate-y-10`}>
                           <span className="w-3/12 text-left">ImReallyATrex</span>
-                          <span className="w-5/12 text-left ml-auto">Brand, Art Direction, Interactive Design, Build</span>
-                          <span className="w-2/12 text-left ml-auto">CUSP</span>
+                          <span className="w-6/12 xl:w-5/12 text-left ml-auto">Brand, Art Direction, Interactive Design, Build</span>
+                          <span className="w-1/12 xl:w-2/12 text-left ml-auto">CUSP</span>
                           <span className="w-1/12 text-right ml-auto group-hover:-translate-y-10 group-focus:-translate-y-10 transition-transform ease-in-out duration-500"><span className="inline-block transform -rotate-45 group-hover:rotate-0 group-focus:rotate-0 transition-transform ease-in-out duration-300">→</span></span>
                         </div>
 
@@ -382,8 +291,8 @@ export default function Works() {
                       <m.span variants={revealUpDelay} className="block relative">
                         <div className={`flex transition-transform ease-in-out duration-500 group-hover:translate-y-10 group-focus:translate-y-10`}>
                           <span className="w-3/12 text-left">Jason O'Rear</span>
-                          <span className="w-5/12 text-left ml-auto">Brand, Art Direction, Interactive Design, Build</span>
-                          <span className="w-2/12 text-left ml-auto">-</span>
+                          <span className="w-6/12 xl:w-5/12 text-left ml-auto">Brand, Art Direction, Interactive Design, Build</span>
+                          <span className="w-1/12 xl:w-2/12 text-left ml-auto">-</span>
                           <span className="w-1/12 text-right ml-auto group-hover:-translate-y-10 group-focus:-translate-y-10 transition-transform ease-in-out duration-500"><span className="inline-block transform -rotate-45 group-hover:rotate-0 group-focus:rotate-0 transition-transform ease-in-out duration-300">→</span></span>
                         </div>
 
@@ -398,8 +307,8 @@ export default function Works() {
                       <m.span variants={revealUpDelay} className="block relative">
                         <div className={`flex transition-transform ease-in-out duration-500 group-hover:translate-y-10 group-focus:translate-y-10`}>
                           <span className="w-3/12 text-left">Fat Free</span>
-                          <span className="w-5/12 text-left ml-auto">Art Direction, Interactive Design, Build</span>
-                          <span className="w-2/12 text-left ml-auto">-</span>
+                          <span className="w-6/12 xl:w-5/12 text-left ml-auto">Art Direction, Interactive Design, Build</span>
+                          <span className="w-1/12 xl:w-2/12 text-left ml-auto">-</span>
                           <span className="w-1/12 text-right ml-auto group-hover:-translate-y-10 group-focus:-translate-y-10 transition-transform ease-in-out duration-500"><span className="inline-block transform -rotate-45 group-hover:rotate-0 group-focus:rotate-0 transition-transform ease-in-out duration-300">→</span></span>
                         </div>
 
@@ -412,7 +321,81 @@ export default function Works() {
                 </div>
               </m.div>
             </section>
-          </Div100vh>
+
+
+            <section className="self-end items-end w-full relative z-30 flex md:hidden mt-[50vh]">
+              <m.div variants={fade} className="w-full">
+                <div className={`ml-auto w-full border-b border-t border-black dark:border-off-grey text-right block mr-5`}>
+                  <div className="pt-4 pb-5 border-b border-black dark:border-off-grey">
+                    <a href="https://www.reform-property.com/" target="_blank" rel="noreferrer noopener" className="block overflow-hidden">
+                      <m.span variants={revealUpDelay} className="block relative">
+                        <div className={`flex items-end`}>
+                          <span className="flex-1 text-left">
+                            <span className="text-[32px] block leading-none mb-2 tracking-tight">Reform</span>
+                            <span className="block text-[11px] leading-none">Brand, Art Direction, Interactive Design, Build</span>
+                          </span>
+                          <span className="w-[50px] text-right ml-auto text-[24px]"><span className="inline-block transform -rotate-45">→</span></span>
+                        </div>
+                      </m.span>
+                    </a>
+                  </div>
+                  <div className="pt-4 pb-5 border-b border-black dark:border-off-grey">
+                    <a href="https://www.prb-a.com/" target="_blank" rel="noreferrer noopener" className="block overflow-hidden">
+                      <m.span variants={revealUpDelay} className="block relative">
+                        <div className={`flex items-end`}>
+                          <span className="flex-1 text-left">
+                            <span className="text-[32px] block leading-none mb-2 tracking-tight">PRB Architects</span>
+                            <span className="block text-[11px] leading-none">Brand, Art Direction, Interactive Design, Build</span>
+                          </span>
+                          <span className="w-[50px] text-right ml-auto text-[24px]"><span className="inline-block transform -rotate-45">→</span></span>
+                        </div>
+                      </m.span>
+                    </a>
+                  </div>
+                  <div className="pt-4 pb-5 border-b border-black dark:border-off-grey">
+                    <a href="https://www.imreallyatrex.com/" target="_blank" rel="noreferrer noopener" className="block overflow-hidden">
+                      <m.span variants={revealUpDelay} className="block relative">
+                        <div className={`flex items-end`}>
+                          <span className="flex-1 text-left">
+                            <span className="text-[32px] block leading-none mb-2 tracking-tight">ImReallyATrex</span>
+                            <span className="block text-[11px] leading-none mb-1">Brand, Art Direction, Interactive Design, Build</span>
+                            <span className="block text-[11px] leading-none">CUSP</span>
+                          </span>
+                          <span className="w-[50px] text-right ml-auto text-[24px]"><span className="inline-block transform -rotate-45">→</span></span>
+                        </div>
+                      </m.span>
+                    </a>
+                  </div>
+                  <div className="pt-4 pb-5 border-b border-black dark:border-off-grey">
+                    <a href="https://www.jasonorear.com/" target="_blank" rel="noreferrer noopener" className="block overflow-hidden">
+                      <m.span variants={revealUpDelay} className="block relative">
+                        <div className={`flex items-end`}>
+                          <span className="flex-1 text-left">
+                            <span className="text-[32px] block leading-none mb-2 tracking-tight">Jason O'Rear</span>
+                            <span className="block text-[11px] leading-none">Brand, Art Direction, Interactive Design, Build</span>
+                          </span>
+                          <span className="w-[50px] text-right ml-auto text-[24px]"><span className="inline-block transform -rotate-45">→</span></span>
+                        </div>
+                      </m.span>
+                    </a>
+                  </div>
+                  <div className="pt-4 pb-5">
+                    <a href="https://www.hellofatfree.com/" target="_blank" rel="noreferrer noopener" className="block overflow-hidden">
+                      <m.span variants={revealUpDelay} className="block relative">
+                        <div className={`flex items-end`}>
+                          <span className="flex-1 text-left">
+                            <span className="text-[32px] block leading-none mb-2 tracking-tight">Fat Free</span>
+                            <span className="block text-[11px] leading-none">Art Direction, Interactive Design, Build</span>
+                          </span>
+                          <span className="w-[50px] text-right ml-auto text-[24px]"><span className="inline-block transform -rotate-45">→</span></span>
+                        </div>
+                      </m.span>
+                    </a>
+                  </div>
+                </div>
+              </m.div>
+            </section>
+          </div>
         </m.div>
       </LazyMotion>
     </Layout>
