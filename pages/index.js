@@ -131,15 +131,15 @@ export default function Home() {
             </header>
 
             <section className="absolute top-0 left-0 p-4 z-40">
-              <div className="overflow-hidden relative mb-5 md:mb-7 xl:mb-9 mt-1 md:mt-2">
+              <div className="overflow-hidden relative mt-1 md:mt-2">
                 <m.span variants={revealUpDelay} className="block">
-                  <Link href="/"><a className="text-[65px] md:text-[90px] xl:text-[120px] block leading-[0.8] tracking-tight nav-text nav-text--active">Bio</a></Link>
+                  <Link href="/"><a className="text-[65px] md:text-[90px] xl:text-[120px] block leading-[1] tracking-tight nav-text nav-text--active">Bio</a></Link>
                 </m.span>
               </div>
               <div className="overflow-hidden relative">
                 <m.span variants={revealUpDelay} className="block">
                   <Link href="/works">
-                    <a className="text-[65px] md:text-[90px] xl:text-[120px] block leading-[0.8] tracking-tight text-black dark:text-off-grey text-opacity-10 dark:text-opacity-10 transition-colors ease-in-out duration-500 relative overflow-hidden nav-text ml-[2px] md:ml-[4px] xl:ml-[5px] " data-text="Works">
+                    <a className="text-[65px] md:text-[90px] xl:text-[120px] block leading-[1] tracking-tight text-black dark:text-off-grey text-opacity-10 dark:text-opacity-10 transition-colors ease-in-out duration-500 relative overflow-hidden nav-text ml-[2px] md:ml-[4px] xl:ml-[5px] " data-text="Works">
                       Works
                     </a>
                   </Link>
