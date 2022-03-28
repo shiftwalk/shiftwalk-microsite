@@ -58,7 +58,7 @@ export default function Works() {
           animate="enter"
           exit="exit"
           className="w-full md:h-full"
-        >
+        > 
           <div className="flex flex-wrap min-h-screen md:min-h-screen p-4 md:p-5 text-[18px] leading-[24px] md:text-[20px] md:leading-[27px] xl:text-[24px] xl:leading-[31px] selection:bg-black selection:text-off-grey dark:selection:bg-off-grey dark:selection:text-black">
 
             <div className={`fixed inset-0 flex items-start md:items-center justify-center transition ease-in-out duration-500 z-10 mt-[35vh] md:mt-0 md:pt-0  ${samHovered || isaacHovered ? 'opacity-0' : 'opacity-100' }`}>
