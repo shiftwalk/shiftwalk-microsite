@@ -1,12 +1,5 @@
-# Next Tailwind Framer Motion Boilerplate
-A simple [Next.js](https://nextjs.org/) starter kit.
+# ShiftWalk Microsite
 
-**Features:**
-- Next 11
-- Tailwind (With JIT mode enabled)
-- Custom PostCSS setup to allow for `@import` and simple CSS nesting
-- Framer Motion 4 (With LazyMotion setup for smaller bundle sizes)
-- Preact configured instead of React for smaller bundle size*
-- jsconfig component/helper/styles/public maps (allows you to use `@/components/...` instead of relative paths)
+NextJs, Tailwind and Framer Motion powered site for the mini-studio of Isaac Powell + Sam Goddard, designing and building highly-crafted brands and websites for partners around the world. We have a particular focus on the sustainability, architectural, and creative arts sectors, but we always like to keep an open mind.
 
-_*To remove Preact and switch back to React simply remove the code in `next.config.js`_
+[https://shiftwalk.studio](https://shiftwalk.studio)
